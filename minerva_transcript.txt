@@ -1,0 +1,285 @@
+MINERVA — FULL GAME TRANSCRIPT
+==============================================================================
+agents: heuristic-fallback   seed: 1917   rounds: 10
+
+
+==============================================================================
+ROUND 1
+==============================================================================
+EMERGENCY BROADCAST — Round 1: Brazil has the highest adversity score this round (21.7/100). It has 635,500 sick citizens and only 576,000 vials. It needs exactly 59,500 vaccines to stop its population and production capacity from crashing.
+-- public pledges --
+   India: "I promise to send 59,500 vaccines." (heuristic)
+   USA: "I promise to send 59,500 vaccines." (heuristic)
+   China: "I promise to send 0 vaccines." (heuristic)
+   Brazil: "I promise to send 0 vaccines." 
+   Germany: "I promise to send 59,500 vaccines." (heuristic)
+-- secret allocations --
+   India: cure=1,020,000 transfers=[{'target': 'Brazil', 'amount': 58978, 'kind': 'gift', 'price': 0}] | heuristic: domestic triage first, partial aid, opportunistic sale
+   USA: cure=600,000 transfers=[{'target': 'Brazil', 'amount': 52199, 'kind': 'gift', 'price': 0}] | heuristic: domestic triage first, partial aid, opportunistic sale
+   China: cure=1,385,000 transfers=[] | heuristic: domestic triage first, partial aid, opportunistic sale
+   Brazil: cure=576,000 transfers=[] | heuristic: domestic triage first, partial aid, opportunistic sale
+   Germany: cure=245,000 transfers=[{'target': 'Brazil', 'amount': 26281, 'kind': 'gift', 'price': 0}] | heuristic: domestic triage first, partial aid, opportunistic sale
+-- deception check --
+   India: promised 59,500 but delivered only 58,978 — BETRAYAL (1% short) (trust -0.13 → 49.9)
+   USA: promised 59,500 but delivered only 52,199 — BETRAYAL (12% short) (trust -1.84 → 48.2)
+   China: made no promise and sent nothing — honest abstention (trust +0.0 → 50.0)
+   Germany: promised 59,500 but delivered only 26,281 — BETRAYAL (56% short) (trust -8.37 → 41.6)
+   India: 0 died → population 10,200,000
+   USA: 0 died → population 6,000,000
+   China: 56,500 died → population 9,243,500
+   Brazil: 59,500 died → population 4,040,500
+   Germany: 0 died → population 2,450,000
+
+==============================================================================
+ROUND 2
+==============================================================================
+EMERGENCY BROADCAST — Round 2: Brazil has the highest adversity score this round (23.3/100). It has 635,500 sick citizens and only 547,420 vials. It needs exactly 88,080 vaccines to stop its population and production capacity from crashing.
+-- public pledges --
+   India: "I promise to send 0 vaccines." (heuristic)
+   USA: "I promise to send 88,080 vaccines." (heuristic)
+   China: "I promise to send 20,736 vaccines." (heuristic)
+   Brazil: "I promise to send 0 vaccines." 
+   Germany: "I promise to send 88,080 vaccines." (heuristic)
+-- secret allocations --
+   India: cure=1,411,022 transfers=[] | heuristic: domestic triage first, partial aid, opportunistic sale
+   USA: cure=600,000 transfers=[{'target': 'Brazil', 'amount': 47727, 'kind': 'gift', 'price': 0}] | heuristic: domestic triage first, partial aid, opportunistic sale
+   China: cure=930,000 transfers=[{'target': 'Brazil', 'amount': 16676, 'kind': 'gift', 'price': 0}] | heuristic: domestic triage first, partial aid, opportunistic sale
+   Brazil: cure=547,420 transfers=[] | heuristic: domestic triage first, partial aid, opportunistic sale
+   Germany: cure=245,000 transfers=[{'target': 'Brazil', 'amount': 41850, 'kind': 'gift', 'price': 0}] | heuristic: domestic triage first, partial aid, opportunistic sale
+-- deception check --
+   India: made no promise and sent nothing — honest abstention (trust +0.0 → 49.9)
+   USA: promised 88,080 but delivered only 47,727 — BETRAYAL (46% short) (trust -6.87 → 41.3)
+   China: promised 20,736 but delivered only 16,676 — BETRAYAL (20% short) (trust -2.94 → 47.1)
+   Germany: promised 88,080 but delivered only 41,850 — BETRAYAL (52% short) (trust -7.87 → 33.9)
+   India: 169,978 died → population 10,030,022
+   USA: 0 died → population 6,000,000
+   China: 0 died → population 9,243,500
+   Brazil: 88,080 died → population 3,952,420
+   Germany: 0 died → population 2,450,000
+
+==============================================================================
+ROUND 3
+==============================================================================
+EMERGENCY BROADCAST — Round 3: Brazil has the highest adversity score this round (25.6/100). It has 635,500 sick citizens and only 507,279 vials. It needs exactly 128,221 vaccines to stop its population and production capacity from crashing.
+-- public pledges --
+   India: "I promise to send 0 vaccines." (heuristic)
+   USA: "I promise to send 128,221 vaccines." (heuristic)
+   China: "I promise to send 0 vaccines." (heuristic)
+   Brazil: "I promise to send 0 vaccines." 
+   Germany: "I promise to send 114,327 vaccines." (heuristic)
+-- secret allocations --
+   India: cure=1,071,835 transfers=[] | heuristic: domestic triage first, partial aid, opportunistic sale
+   USA: cure=600,000 transfers=[{'target': 'Brazil', 'amount': 117560, 'kind': 'gift', 'price': 0}] | heuristic: domestic triage first, partial aid, opportunistic sale
+   China: cure=1,120,686 transfers=[] | heuristic: domestic triage first, partial aid, opportunistic sale
+   Brazil: cure=507,279 transfers=[] | heuristic: domestic triage first, partial aid, opportunistic sale
+   Germany: cure=245,000 transfers=[{'target': 'Brazil', 'amount': 50980, 'kind': 'gift', 'price': 0}] | heuristic: domestic triage first, partial aid, opportunistic sale
+-- deception check --
+   India: made no promise and sent nothing — honest abstention (trust +0.0 → 49.9)
+   USA: promised 128,221 but delivered only 117,560 — BETRAYAL (8% short) (trust -1.25 → 40.3)
+   China: made no promise and sent nothing — honest abstention (trust +0.0 → 47.1)
+   Germany: promised 114,327 but delivered only 50,980 — BETRAYAL (55% short) (trust -8.31 → 25.9)
+   India: 509,165 died → population 9,520,857
+   USA: 0 died → population 6,000,000
+   China: 320,814 died → population 8,922,686
+   Brazil: 128,221 died → population 3,824,199
+   Germany: 0 died → population 2,450,000
+
+==============================================================================
+ROUND 4
+==============================================================================
+EMERGENCY BROADCAST — Round 4: India has the highest adversity score this round (26.1/100). It has 1,581,000 sick citizens and only 1,017,424 vials. It needs exactly 563,576 vaccines to stop its population and production capacity from crashing.
+-- public pledges --
+   India: "I promise to send 0 vaccines." 
+   USA: "I promise to send 140,181 vaccines." (heuristic)
+   China: "I promise to send 13,561 vaccines." (heuristic)
+   Brazil: "I promise to send 51,294 vaccines." (heuristic)
+   Germany: "I promise to send 101,138 vaccines." (heuristic)
+-- secret allocations --
+   India: cure=1,017,424 transfers=[] | heuristic: domestic triage first, partial aid, opportunistic sale
+   USA: cure=600,000 transfers=[{'target': 'India', 'amount': 80964, 'kind': 'gift', 'price': 0}] | heuristic: domestic triage first, partial aid, opportunistic sale
+   China: cure=930,000 transfers=[{'target': 'India', 'amount': 9807, 'kind': 'gift', 'price': 0}] | heuristic: domestic triage first, partial aid, opportunistic sale
+   Brazil: cure=410,000 transfers=[{'target': 'India', 'amount': 42114, 'kind': 'gift', 'price': 0}] | heuristic: domestic triage first, partial aid, opportunistic sale
+   Germany: cure=245,000 transfers=[{'target': 'India', 'amount': 71331, 'kind': 'gift', 'price': 0}] | heuristic: domestic triage first, partial aid, opportunistic sale
+-- deception check --
+   USA: promised 140,181 but delivered only 80,964 — BETRAYAL (42% short) (trust -6.34 → 34.1)
+   China: promised 13,561 but delivered only 9,807 — BETRAYAL (28% short) (trust -4.15 → 43.0)
+   Brazil: promised 51,294 but delivered only 42,114 — BETRAYAL (18% short) (trust -2.68 → 47.3)
+   Germany: promised 101,138 but delivered only 71,331 — BETRAYAL (29% short) (trust -4.42 → 22.0)
+   India: 563,576 died → population 8,957,281
+   USA: 0 died → population 6,000,000
+   China: 0 died → population 8,922,686
+   Brazil: 0 died → population 3,824,199
+   Germany: 0 died → population 2,450,000
+
+==============================================================================
+ROUND 5
+==============================================================================
+EMERGENCY BROADCAST — Round 5: India has the highest adversity score this round (24.8/100). It has 1,581,000 sick citizens and only 1,161,415 vials. It needs exactly 419,585 vaccines to stop its population and production capacity from crashing.
+-- public pledges --
+   India: "I promise to send 0 vaccines." 
+   USA: "I promise to send 0 vaccines." (heuristic)
+   China: "I promise to send 25,160 vaccines." (heuristic)
+   Brazil: "I promise to send 28,860 vaccines." (heuristic)
+   Germany: "I promise to send 76,756 vaccines." (heuristic)
+-- secret allocations --
+   India: cure=1,161,415 transfers=[] | heuristic: domestic triage first, partial aid, opportunistic sale
+   USA: cure=866,550 transfers=[] | heuristic: domestic triage first, partial aid, opportunistic sale
+   China: cure=930,000 transfers=[{'target': 'India', 'amount': 14445, 'kind': 'gift', 'price': 0}] | heuristic: domestic triage first, partial aid, opportunistic sale
+   Brazil: cure=410,000 transfers=[{'target': 'India', 'amount': 19863, 'kind': 'gift', 'price': 0}] | heuristic: domestic triage first, partial aid, opportunistic sale
+   Germany: cure=245,000 transfers=[{'target': 'India', 'amount': 32590, 'kind': 'gift', 'price': 0}] | heuristic: domestic triage first, partial aid, opportunistic sale
+-- deception check --
+   USA: made no promise and sent nothing — honest abstention (trust +0.0 → 34.4)
+   China: promised 25,160 but delivered only 14,445 — BETRAYAL (43% short) (trust -6.39 → 36.8)
+   Brazil: promised 28,860 but delivered only 19,863 — BETRAYAL (31% short) (trust -4.68 → 42.7)
+   Germany: promised 76,756 but delivered only 32,590 — BETRAYAL (58% short) (trust -8.63 → 13.9)
+   India: 419,585 died → population 8,537,696
+   USA: 63,450 died → population 5,936,550
+   China: 0 died → population 8,922,686
+   Brazil: 0 died → population 3,824,199
+   Germany: 0 died → population 2,450,000
+
+==============================================================================
+ROUND 6
+==============================================================================
+EMERGENCY BROADCAST — Round 6: India has the highest adversity score this round (28.7/100). It has 1,581,000 sick citizens and only 979,259 vials. It needs exactly 601,741 vaccines to stop its population and production capacity from crashing.
+-- public pledges --
+   India: "I promise to send 0 vaccines." 
+   USA: "I promise to send 13,173 vaccines." (heuristic)
+   China: "I promise to send 35,832 vaccines." (heuristic)
+   Brazil: "I promise to send 14,213 vaccines." (heuristic)
+   Germany: "I promise to send 0 vaccines." (heuristic)
+-- secret allocations --
+   India: cure=979,259 transfers=[] | heuristic: domestic triage first, partial aid, opportunistic sale
+   USA: cure=600,000 transfers=[{'target': 'India', 'amount': 5689, 'kind': 'gift', 'price': 0}] | heuristic: domestic triage first, partial aid, opportunistic sale
+   China: cure=930,000 transfers=[{'target': 'India', 'amount': 31588, 'kind': 'gift', 'price': 0}] | heuristic: domestic triage first, partial aid, opportunistic sale
+   Brazil: cure=410,000 transfers=[{'target': 'India', 'amount': 10956, 'kind': 'gift', 'price': 0}] | heuristic: domestic triage first, partial aid, opportunistic sale
+   Germany: cure=378,968 transfers=[] | heuristic: domestic triage first, partial aid, opportunistic sale
+-- deception check --
+   USA: promised 13,173 but delivered only 5,689 — BETRAYAL (57% short) (trust -8.52 → 26.2)
+   China: promised 35,832 but delivered only 31,588 — BETRAYAL (12% short) (trust -1.78 → 35.3)
+   Brazil: promised 14,213 but delivered only 10,956 — BETRAYAL (23% short) (trust -3.44 → 39.4)
+   Germany: made no promise and sent nothing — honest abstention (trust +0.0 → 14.6)
+   India: 601,741 died → population 7,935,955
+   USA: 0 died → population 5,936,550
+   China: 0 died → population 8,922,686
+   Brazil: 0 died → population 3,824,199
+   Germany: 782 died → population 2,449,218
+
+==============================================================================
+ROUND 7
+==============================================================================
+EMERGENCY BROADCAST — Round 7: Brazil has the highest adversity score this round (32.6/100). It has 635,500 sick citizens and only 417,671 vials. It needs exactly 217,829 vaccines to stop its population and production capacity from crashing.
+-- public pledges --
+   India: "I promise to send 0 vaccines." (heuristic)
+   USA: "I promise to send 23,786 vaccines." (heuristic)
+   China: "I promise to send 43,076 vaccines." (heuristic)
+   Brazil: "I promise to send 0 vaccines." 
+   Germany: "I promise to send 14,802 vaccines." (heuristic)
+-- secret allocations --
+   India: cure=896,290 transfers=[] | heuristic: domestic triage first, partial aid, opportunistic sale
+   USA: cure=600,000 transfers=[{'target': 'Brazil', 'amount': 20489, 'kind': 'gift', 'price': 0}] | heuristic: domestic triage first, partial aid, opportunistic sale
+   China: cure=930,000 transfers=[{'target': 'Brazil', 'amount': 29152, 'kind': 'gift', 'price': 0}] | heuristic: domestic triage first, partial aid, opportunistic sale
+   Brazil: cure=417,671 transfers=[] | heuristic: domestic triage first, partial aid, opportunistic sale
+   Germany: cure=245,000 transfers=[{'target': 'Brazil', 'amount': 9753, 'kind': 'gift', 'price': 0}] | heuristic: domestic triage first, partial aid, opportunistic sale
+-- deception check --
+   India: made no promise and sent nothing — honest abstention (trust +0.0 → 49.9)
+   USA: promised 23,786 but delivered only 20,489 — BETRAYAL (14% short) (trust -2.08 → 24.6)
+   China: promised 43,076 but delivered only 29,152 — BETRAYAL (32% short) (trust -4.85 → 30.7)
+   Germany: promised 14,802 but delivered only 9,753 — BETRAYAL (34% short) (trust -5.12 → 10.2)
+   India: 123,710 died → population 7,812,245
+   USA: 0 died → population 5,936,550
+   China: 0 died → population 8,922,686
+   Brazil: 217,829 died → population 3,606,370
+   Germany: 0 died → population 2,449,218
+
+==============================================================================
+ROUND 8
+==============================================================================
+EMERGENCY BROADCAST — Round 8: Brazil has the highest adversity score this round (34.1/100). It has 635,500 sick citizens and only 425,308 vials. It needs exactly 210,192 vaccines to stop its population and production capacity from crashing.
+-- public pledges --
+   India: "I promise to send 0 vaccines." (heuristic)
+   USA: "I promise to send 27,739 vaccines." (heuristic)
+   China: "I promise to send 50,806 vaccines." (heuristic)
+   Brazil: "I promise to send 0 vaccines." 
+   Germany: "I promise to send 24,240 vaccines." (heuristic)
+-- secret allocations --
+   India: cure=834,837 transfers=[] | heuristic: domestic triage first, partial aid, opportunistic sale
+   USA: cure=600,000 transfers=[{'target': 'Brazil', 'amount': 14257, 'kind': 'gift', 'price': 0}, {'target': 'India', 'amount': 23693, 'kind': 'sell', 'price': 35539}] | heuristic: domestic triage first, partial aid, opportunistic sale
+   China: cure=930,000 transfers=[{'target': 'Brazil', 'amount': 35550, 'kind': 'gift', 'price': 0}, {'target': 'India', 'amount': 109241, 'kind': 'sell', 'price': 163861}] | heuristic: domestic triage first, partial aid, opportunistic sale
+   Brazil: cure=425,308 transfers=[] | heuristic: domestic triage first, partial aid, opportunistic sale
+   Germany: cure=245,000 transfers=[{'target': 'Brazil', 'amount': 14814, 'kind': 'gift', 'price': 0}, {'target': 'India', 'amount': 14629, 'kind': 'sell', 'price': 21943}] | heuristic: domestic triage first, partial aid, opportunistic sale
+-- deception check --
+   India: made no promise and sent nothing — honest abstention (trust +0.0 → 49.9)
+   USA: promised 27,739 but delivered only 14,257 — BETRAYAL (49% short) (trust -7.29 → 17.8)
+   China: promised 50,806 but delivered only 35,550 — BETRAYAL (30% short) (trust -4.5 → 26.6)
+   Germany: promised 24,240 but delivered only 14,814 — BETRAYAL (39% short) (trust -5.83 → 5.2)
+   India: 746,163 died → population 7,066,082
+   USA: 0 died → population 5,936,550
+   China: 0 died → population 8,922,686
+   Brazil: 210,192 died → population 3,396,178
+   Germany: 0 died → population 2,449,218
+
+==============================================================================
+ROUND 9
+==============================================================================
+EMERGENCY BROADCAST — Round 9: China has the highest adversity score this round (26.8/100). It has 1,441,500 sick citizens and only 1,107,047 vials. It needs exactly 334,453 vaccines to stop its population and production capacity from crashing.
+-- public pledges --
+   India: "I promise to send 0 vaccines." (heuristic)
+   USA: "I promise to send 23,835 vaccines." (heuristic)
+   China: "I promise to send 0 vaccines." 
+   Brazil: "I promise to send 0 vaccines." (heuristic)
+   Germany: "I promise to send 22,848 vaccines." (heuristic)
+-- secret allocations --
+   India: cure=902,663 transfers=[] | heuristic: domestic triage first, partial aid, opportunistic sale
+   USA: cure=600,000 transfers=[{'target': 'China', 'amount': 17254, 'kind': 'gift', 'price': 0}, {'target': 'India', 'amount': 17857, 'kind': 'sell', 'price': 26785}] | heuristic: domestic triage first, partial aid, opportunistic sale
+   China: cure=1,107,047 transfers=[] | heuristic: domestic triage first, partial aid, opportunistic sale
+   Brazil: cure=409,208 transfers=[] | heuristic: domestic triage first, partial aid, opportunistic sale
+   Germany: cure=245,000 transfers=[{'target': 'China', 'amount': 15027, 'kind': 'gift', 'price': 0}, {'target': 'India', 'amount': 13258, 'kind': 'sell', 'price': 19887}] | heuristic: domestic triage first, partial aid, opportunistic sale
+-- deception check --
+   India: made no promise and sent nothing — honest abstention (trust +0.0 → 49.9)
+   USA: promised 23,835 but delivered only 17,254 — BETRAYAL (28% short) (trust -4.14 → 14.3)
+   Brazil: made no promise and sent nothing — honest abstention (trust +0.0 → 40.0)
+   Germany: promised 22,848 but delivered only 15,027 — BETRAYAL (34% short) (trust -5.13 → 1.0)
+   India: 117,337 died → population 6,948,745
+   USA: 0 died → population 5,936,550
+   China: 334,453 died → population 8,588,233
+   Brazil: 792 died → population 3,395,386
+   Germany: 0 died → population 2,449,218
+
+==============================================================================
+ROUND 10
+==============================================================================
+EMERGENCY BROADCAST — Round 10: India has the highest adversity score this round (41.9/100). It has 1,581,000 sick citizens and only 773,676 vials. It needs exactly 807,324 vaccines to stop its population and production capacity from crashing.
+-- public pledges --
+   India: "I promise to send 0 vaccines." 
+   USA: "I promise to send 0 vaccines." (heuristic)
+   China: "I promise to send 0 vaccines." (heuristic)
+   Brazil: "I promise to send 0 vaccines." (heuristic)
+   Germany: "I promise to send 8,089 vaccines." (heuristic)
+-- secret allocations --
+   India: cure=773,676 transfers=[] | heuristic: domestic triage first, partial aid, opportunistic sale
+   USA: cure=647,131 transfers=[] | heuristic: domestic triage first, partial aid, opportunistic sale
+   China: cure=897,960 transfers=[] | heuristic: domestic triage first, partial aid, opportunistic sale
+   Brazil: cure=344,507 transfers=[] | heuristic: domestic triage first, partial aid, opportunistic sale
+   Germany: cure=245,000 transfers=[{'target': 'India', 'amount': 3505, 'kind': 'gift', 'price': 0}, {'target': 'India', 'amount': 5601, 'kind': 'sell', 'price': 8401}] | heuristic: domestic triage first, partial aid, opportunistic sale
+-- deception check --
+   USA: made no promise and sent nothing — honest abstention (trust +0.0 → 15.0)
+   China: made no promise and sent nothing — honest abstention (trust +0.0 → 27.5)
+   Brazil: made no promise and sent nothing — honest abstention (trust +0.0 → 40.2)
+   Germany: promised 8,089 but delivered only 6,306 — BETRAYAL (22% short) (trust -3.31 → 0.0)
+   India: 807,324 died → population 6,141,421
+   USA: 282,869 died → population 5,653,681
+   China: 543,540 died → population 8,044,693
+   Brazil: 65,493 died → population 3,329,893
+   Germany: 0 died → population 2,449,218
+
+==============================================================================
+FINAL LEADERBOARD
+==============================================================================
+      country status  population  survival_%   deaths  vaccinated  capital  stockpile  aid_given  aid_received  vials_sold  betrayals  promises_kept  trust  SCORE
+rank                                                                                                                                                              
+1         USA  ALIVE     5653681        94.2   346319     6313681   121678          0     356139             0       41550          8              0   15.7  75.13
+2     Germany  ALIVE     2449218       100.0      782     2583968     8401       5602     266131             0       33488          9              0    1.0  73.67
+3       China  ALIVE     8044693        86.5  1255307    10090693        1          0     137218         32281      109241          6              0   28.0  64.75
+4       India  ALIVE     6141421        60.2  4058579    10068421   178610       9106      58978        322852           0          1              0   49.9  64.63
+5      Brazil  ALIVE     3329893        81.2   770107     4457393    16384          0      72933        536266           0          3              0   40.4  63.83

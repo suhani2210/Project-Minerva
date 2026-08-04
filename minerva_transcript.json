@@ -1,0 +1,3787 @@
+{
+  "config": {
+    "seed": 1917,
+    "max_rounds": 10,
+    "days_per_round": 10,
+    "D": 10,
+    "wave_fraction": 0.1,
+    "wave_mult_held": 1.0,
+    "wave_mult_failed": 1.55,
+    "K": 0.18,
+    "cost_per_vaccine": 1.0,
+    "agents": "heuristic-fallback",
+    "countries_init": {
+      "India": {
+        "P": 10200000,
+        "C": 5850000,
+        "V": 310000,
+        "alpha": 58,
+        "R_max": 1090000
+      },
+      "USA": {
+        "P": 6000000,
+        "C": 3700000,
+        "V": 385000,
+        "alpha": 88,
+        "R_max": 636000
+      },
+      "China": {
+        "P": 9300000,
+        "C": 5750000,
+        "V": 345000,
+        "alpha": 76,
+        "R_max": 1040000
+      },
+      "Brazil": {
+        "P": 4100000,
+        "C": 2150000,
+        "V": 160000,
+        "alpha": 52,
+        "R_max": 416000
+      },
+      "Germany": {
+        "P": 2450000,
+        "C": 1550000,
+        "V": 195000,
+        "alpha": 84,
+        "R_max": 272000
+      }
+    }
+  },
+  "events": [
+    {
+      "round": 1,
+      "event": "round_start",
+      "snapshot": {
+        "India": {
+          "P": 10200000,
+          "C": 5850000,
+          "V": 310000,
+          "sick": 0,
+          "trust": 50.0,
+          "alive": true
+        },
+        "USA": {
+          "P": 6000000,
+          "C": 3700000,
+          "V": 385000,
+          "sick": 0,
+          "trust": 50.0,
+          "alive": true
+        },
+        "China": {
+          "P": 9300000,
+          "C": 5750000,
+          "V": 345000,
+          "sick": 0,
+          "trust": 50.0,
+          "alive": true
+        },
+        "Brazil": {
+          "P": 4100000,
+          "C": 2150000,
+          "V": 160000,
+          "sick": 0,
+          "trust": 50.0,
+          "alive": true
+        },
+        "Germany": {
+          "P": 2450000,
+          "C": 1550000,
+          "V": 195000,
+          "sick": 0,
+          "trust": 50.0,
+          "alive": true
+        }
+      }
+    },
+    {
+      "round": 1,
+      "event": "pandemic",
+      "details": [
+        {
+          "roll": 3,
+          "contained": true,
+          "multiplier": 1.0,
+          "new_infections": 1020000,
+          "country": "India"
+        },
+        {
+          "roll": 67,
+          "contained": true,
+          "multiplier": 1.0,
+          "new_infections": 600000,
+          "country": "USA"
+        },
+        {
+          "roll": 92,
+          "contained": false,
+          "multiplier": 1.55,
+          "new_infections": 1441500,
+          "country": "China"
+        },
+        {
+          "roll": 90,
+          "contained": false,
+          "multiplier": 1.55,
+          "new_infections": 635500,
+          "country": "Brazil"
+        },
+        {
+          "roll": 20,
+          "contained": true,
+          "multiplier": 1.0,
+          "new_infections": 245000,
+          "country": "Germany"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "event": "production",
+      "details": [
+        {
+          "produced": 1090000,
+          "capacity": 1090000,
+          "spent": 1090000.0,
+          "need": 1730000,
+          "income": 459000.0,
+          "bankrupt": false,
+          "country": "India",
+          "capacity_pct": 100.0
+        },
+        {
+          "produced": 636000,
+          "capacity": 636000,
+          "spent": 636000.0,
+          "need": 815000,
+          "income": 270000.0,
+          "bankrupt": false,
+          "country": "USA",
+          "capacity_pct": 100.0
+        },
+        {
+          "produced": 1040000,
+          "capacity": 1040000,
+          "spent": 1040000.0,
+          "need": 2026500,
+          "income": 418500.0,
+          "bankrupt": false,
+          "country": "China",
+          "capacity_pct": 100.0
+        },
+        {
+          "produced": 416000,
+          "capacity": 416000,
+          "spent": 416000.0,
+          "need": 885500,
+          "income": 184500.0,
+          "bankrupt": false,
+          "country": "Brazil",
+          "capacity_pct": 100.0
+        },
+        {
+          "produced": 272000,
+          "capacity": 272000,
+          "spent": 272000.0,
+          "need": 295000,
+          "income": 110250.0,
+          "bankrupt": false,
+          "country": "Germany",
+          "capacity_pct": 100.0
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "event": "alarm",
+      "critical": "Brazil",
+      "y_needed": 59500,
+      "broadcast": "EMERGENCY BROADCAST \u2014 Round 1: Brazil has the highest adversity score this round (21.7/100). It has 635,500 sick citizens and only 576,000 vials. It needs exactly 59,500 vaccines to stop its population and production capacity from crashing.",
+      "scores": {
+        "India": 13.211963338157261,
+        "USA": 9.761005999077065,
+        "China": 14.002463041428244,
+        "Brazil": 21.655303153045622,
+        "Germany": 13.180749502773997
+      }
+    },
+    {
+      "round": 1,
+      "event": "pledges",
+      "pledges": {
+        "India": 59500,
+        "USA": 59500,
+        "China": 0,
+        "Brazil": 0,
+        "Germany": 59500
+      },
+      "statements": {
+        "India": "(heuristic)",
+        "USA": "(heuristic)",
+        "China": "(heuristic)",
+        "Germany": "(heuristic)"
+      }
+    },
+    {
+      "round": 1,
+      "event": "allocations",
+      "allocations": {
+        "India": {
+          "cure": 1020000,
+          "transfers": [
+            {
+              "target": "Brazil",
+              "amount": 58978,
+              "kind": "gift",
+              "price": 0
+            }
+          ],
+          "reasoning": "heuristic: domestic triage first, partial aid, opportunistic sale"
+        },
+        "USA": {
+          "cure": 600000,
+          "transfers": [
+            {
+              "target": "Brazil",
+              "amount": 52199,
+              "kind": "gift",
+              "price": 0
+            }
+          ],
+          "reasoning": "heuristic: domestic triage first, partial aid, opportunistic sale"
+        },
+        "China": {
+          "cure": 1385000,
+          "transfers": [],
+          "reasoning": "heuristic: domestic triage first, partial aid, opportunistic sale"
+        },
+        "Brazil": {
+          "cure": 576000,
+          "transfers": [],
+          "reasoning": "heuristic: domestic triage first, partial aid, opportunistic sale"
+        },
+        "Germany": {
+          "cure": 245000,
+          "transfers": [
+            {
+              "target": "Brazil",
+              "amount": 26281,
+              "kind": "gift",
+              "price": 0
+            }
+          ],
+          "reasoning": "heuristic: domestic triage first, partial aid, opportunistic sale"
+        }
+      }
+    },
+    {
+      "round": 1,
+      "event": "resolution",
+      "actions": [
+        {
+          "round": 1,
+          "actor": "India",
+          "action": "cure",
+          "amount": 1020000
+        },
+        {
+          "round": 1,
+          "actor": "USA",
+          "action": "cure",
+          "amount": 600000
+        },
+        {
+          "round": 1,
+          "actor": "China",
+          "action": "cure",
+          "amount": 1385000
+        },
+        {
+          "round": 1,
+          "actor": "Brazil",
+          "action": "cure",
+          "amount": 576000
+        },
+        {
+          "round": 1,
+          "actor": "Germany",
+          "action": "cure",
+          "amount": 245000
+        },
+        {
+          "round": 1,
+          "actor": "India",
+          "action": "gift",
+          "target": "Brazil",
+          "amount": 58978
+        },
+        {
+          "round": 1,
+          "actor": "USA",
+          "action": "gift",
+          "target": "Brazil",
+          "amount": 52199
+        },
+        {
+          "round": 1,
+          "actor": "Germany",
+          "action": "gift",
+          "target": "Brazil",
+          "amount": 26281
+        }
+      ],
+      "deception": [
+        {
+          "country": "India",
+          "pledged": 59500,
+          "delivered": 58978,
+          "trust_delta": -0.13,
+          "verdict": "promised 59,500 but delivered only 58,978 \u2014 BETRAYAL (1% short)",
+          "trust": 49.9
+        },
+        {
+          "country": "USA",
+          "pledged": 59500,
+          "delivered": 52199,
+          "trust_delta": -1.84,
+          "verdict": "promised 59,500 but delivered only 52,199 \u2014 BETRAYAL (12% short)",
+          "trust": 48.2
+        },
+        {
+          "country": "China",
+          "pledged": 0,
+          "delivered": 0,
+          "trust_delta": 0.0,
+          "verdict": "made no promise and sent nothing \u2014 honest abstention",
+          "trust": 50.0
+        },
+        {
+          "country": "Germany",
+          "pledged": 59500,
+          "delivered": 26281,
+          "trust_delta": -8.37,
+          "verdict": "promised 59,500 but delivered only 26,281 \u2014 BETRAYAL (56% short)",
+          "trust": 41.6
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "event": "mortality",
+      "details": [
+        {
+          "country": "India",
+          "deaths": 0,
+          "population": 10200000
+        },
+        {
+          "country": "USA",
+          "deaths": 0,
+          "population": 6000000
+        },
+        {
+          "country": "China",
+          "deaths": 56500,
+          "population": 9243500
+        },
+        {
+          "country": "Brazil",
+          "deaths": 59500,
+          "population": 4040500
+        },
+        {
+          "country": "Germany",
+          "deaths": 0,
+          "population": 2450000
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "event": "elimination",
+      "details": [],
+      "alive": [
+        "India",
+        "USA",
+        "China",
+        "Brazil",
+        "Germany"
+      ]
+    },
+    {
+      "round": 2,
+      "event": "round_start",
+      "snapshot": {
+        "India": {
+          "P": 10200000,
+          "C": 5219000,
+          "V": 321022,
+          "sick": 0,
+          "trust": 49.9,
+          "alive": true
+        },
+        "USA": {
+          "P": 6000000,
+          "C": 3334000,
+          "V": 368801,
+          "sick": 0,
+          "trust": 48.2,
+          "alive": true
+        },
+        "China": {
+          "P": 9243500,
+          "C": 5128500,
+          "V": 0,
+          "sick": 0,
+          "trust": 50.0,
+          "alive": true
+        },
+        "Brazil": {
+          "P": 4040500,
+          "C": 1918500,
+          "V": 137458,
+          "sick": 0,
+          "trust": 50.0,
+          "alive": true
+        },
+        "Germany": {
+          "P": 2450000,
+          "C": 1388250,
+          "V": 195719,
+          "sick": 0,
+          "trust": 41.8,
+          "alive": true
+        }
+      }
+    },
+    {
+      "round": 2,
+      "event": "pandemic",
+      "details": [
+        {
+          "roll": 62,
+          "contained": false,
+          "multiplier": 1.55,
+          "new_infections": 1581000,
+          "country": "India"
+        },
+        {
+          "roll": 42,
+          "contained": true,
+          "multiplier": 1.0,
+          "new_infections": 600000,
+          "country": "USA"
+        },
+        {
+          "roll": 38,
+          "contained": true,
+          "multiplier": 1.0,
+          "new_infections": 930000,
+          "country": "China"
+        },
+        {
+          "roll": 87,
+          "contained": false,
+          "multiplier": 1.55,
+          "new_infections": 635500,
+          "country": "Brazil"
+        },
+        {
+          "roll": 76,
+          "contained": true,
+          "multiplier": 1.0,
+          "new_infections": 245000,
+          "country": "Germany"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "event": "production",
+      "details": [
+        {
+          "produced": 1090000,
+          "capacity": 1090000,
+          "spent": 1090000.0,
+          "need": 2279978,
+          "income": 459000.0,
+          "bankrupt": false,
+          "country": "India",
+          "capacity_pct": 100.0
+        },
+        {
+          "produced": 636000,
+          "capacity": 636000,
+          "spent": 636000.0,
+          "need": 831199,
+          "income": 270000.0,
+          "bankrupt": false,
+          "country": "USA",
+          "capacity_pct": 100.0
+        },
+        {
+          "produced": 1033681,
+          "capacity": 1033681,
+          "spent": 1033681.0,
+          "need": 1860000,
+          "income": 415957.5,
+          "bankrupt": false,
+          "country": "China",
+          "capacity_pct": 99.39247311827957
+        },
+        {
+          "produced": 409962,
+          "capacity": 409962,
+          "spent": 409962.0,
+          "need": 908042,
+          "income": 181822.5,
+          "bankrupt": false,
+          "country": "Brazil",
+          "capacity_pct": 98.54878048780488
+        },
+        {
+          "produced": 272000,
+          "capacity": 272000,
+          "spent": 272000.0,
+          "need": 294281,
+          "income": 110250.0,
+          "bankrupt": false,
+          "country": "Germany",
+          "capacity_pct": 100.0
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "event": "alarm",
+      "critical": "Brazil",
+      "y_needed": 88080,
+      "broadcast": "EMERGENCY BROADCAST \u2014 Round 2: Brazil has the highest adversity score this round (23.3/100). It has 635,500 sick citizens and only 547,420 vials. It needs exactly 88,080 vaccines to stop its population and production capacity from crashing.",
+      "scores": {
+        "India": 18.64714771238812,
+        "USA": 10.080241935483873,
+        "China": 10.849445272975139,
+        "Brazil": 23.31816233634202,
+        "Germany": 13.637031214911296
+      }
+    },
+    {
+      "round": 2,
+      "event": "pledges",
+      "pledges": {
+        "India": 0,
+        "USA": 88080,
+        "China": 20736,
+        "Brazil": 0,
+        "Germany": 88080
+      },
+      "statements": {
+        "India": "(heuristic)",
+        "USA": "(heuristic)",
+        "China": "(heuristic)",
+        "Germany": "(heuristic)"
+      }
+    },
+    {
+      "round": 2,
+      "event": "allocations",
+      "allocations": {
+        "India": {
+          "cure": 1411022,
+          "transfers": [],
+          "reasoning": "heuristic: domestic triage first, partial aid, opportunistic sale"
+        },
+        "USA": {
+          "cure": 600000,
+          "transfers": [
+            {
+              "target": "Brazil",
+              "amount": 47727,
+              "kind": "gift",
+              "price": 0
+            }
+          ],
+          "reasoning": "heuristic: domestic triage first, partial aid, opportunistic sale"
+        },
+        "China": {
+          "cure": 930000,
+          "transfers": [
+            {
+              "target": "Brazil",
+              "amount": 16676,
+              "kind": "gift",
+              "price": 0
+            }
+          ],
+          "reasoning": "heuristic: domestic triage first, partial aid, opportunistic sale"
+        },
+        "Brazil": {
+          "cure": 547420,
+          "transfers": [],
+          "reasoning": "heuristic: domestic triage first, partial aid, opportunistic sale"
+        },
+        "Germany": {
+          "cure": 245000,
+          "transfers": [
+            {
+              "target": "Brazil",
+              "amount": 41850,
+              "kind": "gift",
+              "price": 0
+            }
+          ],
+          "reasoning": "heuristic: domestic triage first, partial aid, opportunistic sale"
+        }
+      }
+    },
+    {
+      "round": 2,
+      "event": "resolution",
+      "actions": [
+        {
+          "round": 2,
+          "actor": "India",
+          "action": "cure",
+          "amount": 1411022
+        },
+        {
+          "round": 2,
+          "actor": "USA",
+          "action": "cure",
+          "amount": 600000
+        },
+        {
+          "round": 2,
+          "actor": "China",
+          "action": "cure",
+          "amount": 930000
+        },
+        {
+          "round": 2,
+          "actor": "Brazil",
+          "action": "cure",
+          "amount": 547420
+        },
+        {
+          "round": 2,
+          "actor": "Germany",
+          "action": "cure",
+          "amount": 245000
+        },
+        {
+          "round": 2,
+          "actor": "USA",
+          "action": "gift",
+          "target": "Brazil",
+          "amount": 47727
+        },
+        {
+          "round": 2,
+          "actor": "China",
+          "action": "gift",
+          "target": "Brazil",
+          "amount": 16676
+        },
+        {
+          "round": 2,
+          "actor": "Germany",
+          "action": "gift",
+          "target": "Brazil",
+          "amount": 41850
+        }
+      ],
+      "deception": [
+        {
+          "country": "India",
+          "pledged": 0,
+          "delivered": 0,
+          "trust_delta": 0.0,
+          "verdict": "made no promise and sent nothing \u2014 honest abstention",
+          "trust": 49.9
+        },
+        {
+          "country": "USA",
+          "pledged": 88080,
+          "delivered": 47727,
+          "trust_delta": -6.87,
+          "verdict": "promised 88,080 but delivered only 47,727 \u2014 BETRAYAL (46% short)",
+          "trust": 41.3
+        },
+        {
+          "country": "China",
+          "pledged": 20736,
+          "delivered": 16676,
+          "trust_delta": -2.94,
+          "verdict": "promised 20,736 but delivered only 16,676 \u2014 BETRAYAL (20% short)",
+          "trust": 47.1
+        },
+        {
+          "country": "Germany",
+          "pledged": 88080,
+          "delivered": 41850,
+          "trust_delta": -7.87,
+          "verdict": "promised 88,080 but delivered only 41,850 \u2014 BETRAYAL (52% short)",
+          "trust": 33.9
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "event": "mortality",
+      "details": [
+        {
+          "country": "India",
+          "deaths": 169978,
+          "population": 10030022
+        },
+        {
+          "country": "USA",
+          "deaths": 0,
+          "population": 6000000
+        },
+        {
+          "country": "China",
+          "deaths": 0,
+          "population": 9243500
+        },
+        {
+          "country": "Brazil",
+          "deaths": 88080,
+          "population": 3952420
+        },
+        {
+          "country": "Germany",
+          "deaths": 0,
+          "population": 2450000
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "event": "elimination",
+      "details": [],
+      "alive": [
+        "India",
+        "USA",
+        "China",
+        "Brazil",
+        "Germany"
+      ]
+    },
+    {
+      "round": 3,
+      "event": "round_start",
+      "snapshot": {
+        "India": {
+          "P": 10030022,
+          "C": 4588000,
+          "V": 0,
+          "sick": 0,
+          "trust": 49.9,
+          "alive": true
+        },
+        "USA": {
+          "P": 6000000,
+          "C": 2968000,
+          "V": 357074,
+          "sick": 0,
+          "trust": 41.5,
+          "alive": true
+        },
+        "China": {
+          "P": 9243500,
+          "C": 4510776,
+          "V": 87005,
+          "sick": 0,
+          "trust": 47.1,
+          "alive": true
+        },
+        "Brazil": {
+          "P": 3952420,
+          "C": 1690360,
+          "V": 106253,
+          "sick": 0,
+          "trust": 50.0,
+          "alive": true
+        },
+        "Germany": {
+          "P": 2450000,
+          "C": 1226500,
+          "V": 180869,
+          "sick": 0,
+          "trust": 34.2,
+          "alive": true
+        }
+      }
+    },
+    {
+      "round": 3,
+      "event": "pandemic",
+      "details": [
+        {
+          "roll": 98,
+          "contained": false,
+          "multiplier": 1.55,
+          "new_infections": 1581000,
+          "country": "India"
+        },
+        {
+          "roll": 44,
+          "contained": true,
+          "multiplier": 1.0,
+          "new_infections": 600000,
+          "country": "USA"
+        },
+        {
+          "roll": 84,
+          "contained": false,
+          "multiplier": 1.55,
+          "new_infections": 1441500,
+          "country": "China"
+        },
+        {
+          "roll": 98,
+          "contained": false,
+          "multiplier": 1.55,
+          "new_infections": 635500,
+          "country": "Brazil"
+        },
+        {
+          "roll": 58,
+          "contained": true,
+          "multiplier": 1.0,
+          "new_infections": 245000,
+          "country": "Germany"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "event": "production",
+      "details": [
+        {
+          "produced": 1071835,
+          "capacity": 1071835,
+          "spent": 1071835.0,
+          "need": 2601000,
+          "income": 451350.99,
+          "bankrupt": false,
+          "country": "India",
+          "capacity_pct": 98.33354901960784
+        },
+        {
+          "produced": 636000,
+          "capacity": 636000,
+          "spent": 636000.0,
+          "need": 842926,
+          "income": 270000.0,
+          "bankrupt": false,
+          "country": "USA",
+          "capacity_pct": 100.0
+        },
+        {
+          "produced": 1033681,
+          "capacity": 1033681,
+          "spent": 1033681.0,
+          "need": 2284495,
+          "income": 415957.5,
+          "bankrupt": false,
+          "country": "China",
+          "capacity_pct": 99.39247311827957
+        },
+        {
+          "produced": 401026,
+          "capacity": 401026,
+          "spent": 401026.0,
+          "need": 939247,
+          "income": 177858.9,
+          "bankrupt": false,
+          "country": "Brazil",
+          "capacity_pct": 96.40048780487805
+        },
+        {
+          "produced": 272000,
+          "capacity": 272000,
+          "spent": 272000.0,
+          "need": 309131,
+          "income": 110250.0,
+          "bankrupt": false,
+          "country": "Germany",
+          "capacity_pct": 100.0
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "event": "alarm",
+      "critical": "Brazil",
+      "y_needed": 128221,
+      "broadcast": "EMERGENCY BROADCAST \u2014 Round 3: Brazil has the highest adversity score this round (25.6/100). It has 635,500 sick citizens and only 507,279 vials. It needs exactly 128,221 vaccines to stop its population and production capacity from crashing.",
+      "scores": {
+        "India": 24.46413510042356,
+        "USA": 10.46435313714603,
+        "China": 19.247096510809232,
+        "Brazil": 25.559322501042065,
+        "Germany": 14.16480203414457
+      }
+    },
+    {
+      "round": 3,
+      "event": "pledges",
+      "pledges": {
+        "India": 0,
+        "USA": 128221,
+        "China": 0,
+        "Brazil": 0,
+        "Germany": 114327
+      },
+      "statements": {
+        "India": "(heuristic)",
+        "USA": "(heuristic)",
+        "China": "(heuristic)",
+        "Germany": "(heuristic)"
+      }
+    },
+    {
+      "round": 3,
+      "event": "allocations",
+      "allocations": {
+        "India": {
+          "cure": 1071835,
+          "transfers": [],
+          "reasoning": "heuristic: domestic triage first, partial aid, opportunistic sale"
+        },
+        "USA": {
+          "cure": 600000,
+          "transfers": [
+            {
+              "target": "Brazil",
+              "amount": 117560,
+              "kind": "gift",
+              "price": 0
+            }
+          ],
+          "reasoning": "heuristic: domestic triage first, partial aid, opportunistic sale"
+        },
+        "China": {
+          "cure": 1120686,
+          "transfers": [],
+          "reasoning": "heuristic: domestic triage first, partial aid, opportunistic sale"
+        },
+        "Brazil": {
+          "cure": 507279,
+          "transfers": [],
+          "reasoning": "heuristic: domestic triage first, partial aid, opportunistic sale"
+        },
+        "Germany": {
+          "cure": 245000,
+          "transfers": [
+            {
+              "target": "Brazil",
+              "amount": 50980,
+              "kind": "gift",
+              "price": 0
+            }
+          ],
+          "reasoning": "heuristic: domestic triage first, partial aid, opportunistic sale"
+        }
+      }
+    },
+    {
+      "round": 3,
+      "event": "resolution",
+      "actions": [
+        {
+          "round": 3,
+          "actor": "India",
+          "action": "cure",
+          "amount": 1071835
+        },
+        {
+          "round": 3,
+          "actor": "USA",
+          "action": "cure",
+          "amount": 600000
+        },
+        {
+          "round": 3,
+          "actor": "China",
+          "action": "cure",
+          "amount": 1120686
+        },
+        {
+          "round": 3,
+          "actor": "Brazil",
+          "action": "cure",
+          "amount": 507279
+        },
+        {
+          "round": 3,
+          "actor": "Germany",
+          "action": "cure",
+          "amount": 245000
+        },
+        {
+          "round": 3,
+          "actor": "USA",
+          "action": "gift",
+          "target": "Brazil",
+          "amount": 117560
+        },
+        {
+          "round": 3,
+          "actor": "Germany",
+          "action": "gift",
+          "target": "Brazil",
+          "amount": 50980
+        }
+      ],
+      "deception": [
+        {
+          "country": "India",
+          "pledged": 0,
+          "delivered": 0,
+          "trust_delta": 0.0,
+          "verdict": "made no promise and sent nothing \u2014 honest abstention",
+          "trust": 49.9
+        },
+        {
+          "country": "USA",
+          "pledged": 128221,
+          "delivered": 117560,
+          "trust_delta": -1.25,
+          "verdict": "promised 128,221 but delivered only 117,560 \u2014 BETRAYAL (8% short)",
+          "trust": 40.3
+        },
+        {
+          "country": "China",
+          "pledged": 0,
+          "delivered": 0,
+          "trust_delta": 0.0,
+          "verdict": "made no promise and sent nothing \u2014 honest abstention",
+          "trust": 47.1
+        },
+        {
+          "country": "Germany",
+          "pledged": 114327,
+          "delivered": 50980,
+          "trust_delta": -8.31,
+          "verdict": "promised 114,327 but delivered only 50,980 \u2014 BETRAYAL (55% short)",
+          "trust": 25.9
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "event": "mortality",
+      "details": [
+        {
+          "country": "India",
+          "deaths": 509165,
+          "population": 9520857
+        },
+        {
+          "country": "USA",
+          "deaths": 0,
+          "population": 6000000
+        },
+        {
+          "country": "China",
+          "deaths": 320814,
+          "population": 8922686
+        },
+        {
+          "country": "Brazil",
+          "deaths": 128221,
+          "population": 3824199
+        },
+        {
+          "country": "Germany",
+          "deaths": 0,
+          "population": 2450000
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "event": "elimination",
+      "details": [],
+      "alive": [
+        "India",
+        "USA",
+        "China",
+        "Brazil",
+        "Germany"
+      ]
+    },
+    {
+      "round": 4,
+      "event": "round_start",
+      "snapshot": {
+        "India": {
+          "P": 9520857,
+          "C": 3967516,
+          "V": 0,
+          "sick": 0,
+          "trust": 49.9,
+          "alive": true
+        },
+        "USA": {
+          "P": 6000000,
+          "C": 2602000,
+          "V": 275514,
+          "sick": 0,
+          "trust": 40.4,
+          "alive": true
+        },
+        "China": {
+          "P": 8922686,
+          "C": 3893053,
+          "V": 0,
+          "sick": 0,
+          "trust": 47.2,
+          "alive": true
+        },
+        "Brazil": {
+          "P": 3824199,
+          "C": 1467193,
+          "V": 168540,
+          "sick": 0,
+          "trust": 50.0,
+          "alive": true
+        },
+        "Germany": {
+          "P": 2450000,
+          "C": 1064750,
+          "V": 156889,
+          "sick": 0,
+          "trust": 26.4,
+          "alive": true
+        }
+      }
+    },
+    {
+      "round": 4,
+      "event": "pandemic",
+      "details": [
+        {
+          "roll": 95,
+          "contained": false,
+          "multiplier": 1.55,
+          "new_infections": 1581000,
+          "country": "India"
+        },
+        {
+          "roll": 64,
+          "contained": true,
+          "multiplier": 1.0,
+          "new_infections": 600000,
+          "country": "USA"
+        },
+        {
+          "roll": 14,
+          "contained": true,
+          "multiplier": 1.0,
+          "new_infections": 930000,
+          "country": "China"
+        },
+        {
+          "roll": 27,
+          "contained": true,
+          "multiplier": 1.0,
+          "new_infections": 410000,
+          "country": "Brazil"
+        },
+        {
+          "roll": 60,
+          "contained": true,
+          "multiplier": 1.0,
+          "new_infections": 245000,
+          "country": "Germany"
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "event": "production",
+      "details": [
+        {
+          "produced": 1017424,
+          "capacity": 1017424,
+          "spent": 1017424.0,
+          "need": 2601000,
+          "income": 428438.565,
+          "bankrupt": false,
+          "country": "India",
+          "capacity_pct": 93.34173529411764
+        },
+        {
+          "produced": 636000,
+          "capacity": 636000,
+          "spent": 636000.0,
+          "need": 924486,
+          "income": 270000.0,
+          "bankrupt": false,
+          "country": "USA",
+          "capacity_pct": 100.0
+        },
+        {
+          "produced": 997805,
+          "capacity": 997805,
+          "spent": 997805.0,
+          "need": 1860000,
+          "income": 401520.87,
+          "bankrupt": false,
+          "country": "China",
+          "capacity_pct": 95.94286021505377
+        },
+        {
+          "produced": 388016,
+          "capacity": 388016,
+          "spent": 388016.0,
+          "need": 651460,
+          "income": 172088.955,
+          "bankrupt": false,
+          "country": "Brazil",
+          "capacity_pct": 93.27314634146342
+        },
+        {
+          "produced": 272000,
+          "capacity": 272000,
+          "spent": 272000.0,
+          "need": 333111,
+          "income": 110250.0,
+          "bankrupt": false,
+          "country": "Germany",
+          "capacity_pct": 100.0
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "event": "alarm",
+      "critical": "India",
+      "y_needed": 563576,
+      "broadcast": "EMERGENCY BROADCAST \u2014 Round 4: India has the highest adversity score this round (26.1/100). It has 1,581,000 sick citizens and only 1,017,424 vials. It needs exactly 563,576 vaccines to stop its population and production capacity from crashing.",
+      "scores": {
+        "India": 26.110049912010112,
+        "USA": 10.935352286773794,
+        "China": 11.781287006401229,
+        "Brazil": 18.68745634146769,
+        "Germany": 14.78229111928534
+      }
+    },
+    {
+      "round": 4,
+      "event": "pledges",
+      "pledges": {
+        "India": 0,
+        "USA": 140181,
+        "China": 13561,
+        "Brazil": 51294,
+        "Germany": 101138
+      },
+      "statements": {
+        "USA": "(heuristic)",
+        "China": "(heuristic)",
+        "Brazil": "(heuristic)",
+        "Germany": "(heuristic)"
+      }
+    },
+    {
+      "round": 4,
+      "event": "allocations",
+      "allocations": {
+        "India": {
+          "cure": 1017424,
+          "transfers": [],
+          "reasoning": "heuristic: domestic triage first, partial aid, opportunistic sale"
+        },
+        "USA": {
+          "cure": 600000,
+          "transfers": [
+            {
+              "target": "India",
+              "amount": 80964,
+              "kind": "gift",
+              "price": 0
+            }
+          ],
+          "reasoning": "heuristic: domestic triage first, partial aid, opportunistic sale"
+        },
+        "China": {
+          "cure": 930000,
+          "transfers": [
+            {
+              "target": "India",
+              "amount": 9807,
+              "kind": "gift",
+              "price": 0
+            }
+          ],
+          "reasoning": "heuristic: domestic triage first, partial aid, opportunistic sale"
+        },
+        "Brazil": {
+          "cure": 410000,
+          "transfers": [
+            {
+              "target": "India",
+              "amount": 42114,
+              "kind": "gift",
+              "price": 0
+            }
+          ],
+          "reasoning": "heuristic: domestic triage first, partial aid, opportunistic sale"
+        },
+        "Germany": {
+          "cure": 245000,
+          "transfers": [
+            {
+              "target": "India",
+              "amount": 71331,
+              "kind": "gift",
+              "price": 0
+            }
+          ],
+          "reasoning": "heuristic: domestic triage first, partial aid, opportunistic sale"
+        }
+      }
+    },
+    {
+      "round": 4,
+      "event": "resolution",
+      "actions": [
+        {
+          "round": 4,
+          "actor": "India",
+          "action": "cure",
+          "amount": 1017424
+        },
+        {
+          "round": 4,
+          "actor": "USA",
+          "action": "cure",
+          "amount": 600000
+        },
+        {
+          "round": 4,
+          "actor": "China",
+          "action": "cure",
+          "amount": 930000
+        },
+        {
+          "round": 4,
+          "actor": "Brazil",
+          "action": "cure",
+          "amount": 410000
+        },
+        {
+          "round": 4,
+          "actor": "Germany",
+          "action": "cure",
+          "amount": 245000
+        },
+        {
+          "round": 4,
+          "actor": "USA",
+          "action": "gift",
+          "target": "India",
+          "amount": 80964
+        },
+        {
+          "round": 4,
+          "actor": "China",
+          "action": "gift",
+          "target": "India",
+          "amount": 9807
+        },
+        {
+          "round": 4,
+          "actor": "Brazil",
+          "action": "gift",
+          "target": "India",
+          "amount": 42114
+        },
+        {
+          "round": 4,
+          "actor": "Germany",
+          "action": "gift",
+          "target": "India",
+          "amount": 71331
+        }
+      ],
+      "deception": [
+        {
+          "country": "USA",
+          "pledged": 140181,
+          "delivered": 80964,
+          "trust_delta": -6.34,
+          "verdict": "promised 140,181 but delivered only 80,964 \u2014 BETRAYAL (42% short)",
+          "trust": 34.1
+        },
+        {
+          "country": "China",
+          "pledged": 13561,
+          "delivered": 9807,
+          "trust_delta": -4.15,
+          "verdict": "promised 13,561 but delivered only 9,807 \u2014 BETRAYAL (28% short)",
+          "trust": 43.0
+        },
+        {
+          "country": "Brazil",
+          "pledged": 51294,
+          "delivered": 42114,
+          "trust_delta": -2.68,
+          "verdict": "promised 51,294 but delivered only 42,114 \u2014 BETRAYAL (18% short)",
+          "trust": 47.3
+        },
+        {
+          "country": "Germany",
+          "pledged": 101138,
+          "delivered": 71331,
+          "trust_delta": -4.42,
+          "verdict": "promised 101,138 but delivered only 71,331 \u2014 BETRAYAL (29% short)",
+          "trust": 22.0
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "event": "mortality",
+      "details": [
+        {
+          "country": "India",
+          "deaths": 563576,
+          "population": 8957281
+        },
+        {
+          "country": "USA",
+          "deaths": 0,
+          "population": 6000000
+        },
+        {
+          "country": "China",
+          "deaths": 0,
+          "population": 8922686
+        },
+        {
+          "country": "Brazil",
+          "deaths": 0,
+          "population": 3824199
+        },
+        {
+          "country": "Germany",
+          "deaths": 0,
+          "population": 2450000
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "event": "elimination",
+      "details": [],
+      "alive": [
+        "India",
+        "USA",
+        "China",
+        "Brazil",
+        "Germany"
+      ]
+    },
+    {
+      "round": 5,
+      "event": "round_start",
+      "snapshot": {
+        "India": {
+          "P": 8957281,
+          "C": 3378531,
+          "V": 204216,
+          "sick": 0,
+          "trust": 49.9,
+          "alive": true
+        },
+        "USA": {
+          "P": 6000000,
+          "C": 2236000,
+          "V": 230550,
+          "sick": 0,
+          "trust": 34.4,
+          "alive": true
+        },
+        "China": {
+          "P": 8922686,
+          "C": 3296769,
+          "V": 57998,
+          "sick": 0,
+          "trust": 43.2,
+          "alive": true
+        },
+        "Brazil": {
+          "P": 3824199,
+          "C": 1251266,
+          "V": 104442,
+          "sick": 0,
+          "trust": 47.4,
+          "alive": true
+        },
+        "Germany": {
+          "P": 2450000,
+          "C": 903000,
+          "V": 112558,
+          "sick": 0,
+          "trust": 22.6,
+          "alive": true
+        }
+      }
+    },
+    {
+      "round": 5,
+      "event": "pandemic",
+      "details": [
+        {
+          "roll": 90,
+          "contained": false,
+          "multiplier": 1.55,
+          "new_infections": 1581000,
+          "country": "India"
+        },
+        {
+          "roll": 91,
+          "contained": false,
+          "multiplier": 1.55,
+          "new_infections": 930000,
+          "country": "USA"
+        },
+        {
+          "roll": 72,
+          "contained": true,
+          "multiplier": 1.0,
+          "new_infections": 930000,
+          "country": "China"
+        },
+        {
+          "roll": 49,
+          "contained": true,
+          "multiplier": 1.0,
+          "new_infections": 410000,
+          "country": "Brazil"
+        },
+        {
+          "roll": 3,
+          "contained": true,
+          "multiplier": 1.0,
+          "new_infections": 245000,
+          "country": "Germany"
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "event": "production",
+      "details": [
+        {
+          "produced": 957199,
+          "capacity": 957199,
+          "spent": 957199.0,
+          "need": 2396784,
+          "income": 403077.64499999996,
+          "bankrupt": false,
+          "country": "India",
+          "capacity_pct": 87.81648039215686
+        },
+        {
+          "produced": 636000,
+          "capacity": 636000,
+          "spent": 636000.0,
+          "need": 1299450,
+          "income": 270000.0,
+          "bankrupt": false,
+          "country": "USA",
+          "capacity_pct": 100.0
+        },
+        {
+          "produced": 997805,
+          "capacity": 997805,
+          "spent": 997805.0,
+          "need": 1802002,
+          "income": 401520.87,
+          "bankrupt": false,
+          "country": "China",
+          "capacity_pct": 95.94286021505377
+        },
+        {
+          "produced": 388016,
+          "capacity": 388016,
+          "spent": 388016.0,
+          "need": 715558,
+          "income": 172088.955,
+          "bankrupt": false,
+          "country": "Brazil",
+          "capacity_pct": 93.27314634146342
+        },
+        {
+          "produced": 272000,
+          "capacity": 272000,
+          "spent": 272000.0,
+          "need": 377442,
+          "income": 110250.0,
+          "bankrupt": false,
+          "country": "Germany",
+          "capacity_pct": 100.0
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "event": "alarm",
+      "critical": "India",
+      "y_needed": 419585,
+      "broadcast": "EMERGENCY BROADCAST \u2014 Round 5: India has the highest adversity score this round (24.8/100). It has 1,581,000 sick citizens and only 1,161,415 vials. It needs exactly 419,585 vaccines to stop its population and production capacity from crashing.",
+      "scores": {
+        "India": 24.799678827379186,
+        "USA": 15.707125997527257,
+        "China": 12.343814688912193,
+        "Brazil": 19.39431828264081,
+        "Germany": 15.514501076812637
+      }
+    },
+    {
+      "round": 5,
+      "event": "pledges",
+      "pledges": {
+        "India": 0,
+        "USA": 0,
+        "China": 25160,
+        "Brazil": 28860,
+        "Germany": 76756
+      },
+      "statements": {
+        "USA": "(heuristic)",
+        "China": "(heuristic)",
+        "Brazil": "(heuristic)",
+        "Germany": "(heuristic)"
+      }
+    },
+    {
+      "round": 5,
+      "event": "allocations",
+      "allocations": {
+        "India": {
+          "cure": 1161415,
+          "transfers": [],
+          "reasoning": "heuristic: domestic triage first, partial aid, opportunistic sale"
+        },
+        "USA": {
+          "cure": 866550,
+          "transfers": [],
+          "reasoning": "heuristic: domestic triage first, partial aid, opportunistic sale"
+        },
+        "China": {
+          "cure": 930000,
+          "transfers": [
+            {
+              "target": "India",
+              "amount": 14445,
+              "kind": "gift",
+              "price": 0
+            }
+          ],
+          "reasoning": "heuristic: domestic triage first, partial aid, opportunistic sale"
+        },
+        "Brazil": {
+          "cure": 410000,
+          "transfers": [
+            {
+              "target": "India",
+              "amount": 19863,
+              "kind": "gift",
+              "price": 0
+            }
+          ],
+          "reasoning": "heuristic: domestic triage first, partial aid, opportunistic sale"
+        },
+        "Germany": {
+          "cure": 245000,
+          "transfers": [
+            {
+              "target": "India",
+              "amount": 32590,
+              "kind": "gift",
+              "price": 0
+            }
+          ],
+          "reasoning": "heuristic: domestic triage first, partial aid, opportunistic sale"
+        }
+      }
+    },
+    {
+      "round": 5,
+      "event": "resolution",
+      "actions": [
+        {
+          "round": 5,
+          "actor": "India",
+          "action": "cure",
+          "amount": 1161415
+        },
+        {
+          "round": 5,
+          "actor": "USA",
+          "action": "cure",
+          "amount": 866550
+        },
+        {
+          "round": 5,
+          "actor": "China",
+          "action": "cure",
+          "amount": 930000
+        },
+        {
+          "round": 5,
+          "actor": "Brazil",
+          "action": "cure",
+          "amount": 410000
+        },
+        {
+          "round": 5,
+          "actor": "Germany",
+          "action": "cure",
+          "amount": 245000
+        },
+        {
+          "round": 5,
+          "actor": "China",
+          "action": "gift",
+          "target": "India",
+          "amount": 14445
+        },
+        {
+          "round": 5,
+          "actor": "Brazil",
+          "action": "gift",
+          "target": "India",
+          "amount": 19863
+        },
+        {
+          "round": 5,
+          "actor": "Germany",
+          "action": "gift",
+          "target": "India",
+          "amount": 32590
+        }
+      ],
+      "deception": [
+        {
+          "country": "USA",
+          "pledged": 0,
+          "delivered": 0,
+          "trust_delta": 0.0,
+          "verdict": "made no promise and sent nothing \u2014 honest abstention",
+          "trust": 34.4
+        },
+        {
+          "country": "China",
+          "pledged": 25160,
+          "delivered": 14445,
+          "trust_delta": -6.39,
+          "verdict": "promised 25,160 but delivered only 14,445 \u2014 BETRAYAL (43% short)",
+          "trust": 36.8
+        },
+        {
+          "country": "Brazil",
+          "pledged": 28860,
+          "delivered": 19863,
+          "trust_delta": -4.68,
+          "verdict": "promised 28,860 but delivered only 19,863 \u2014 BETRAYAL (31% short)",
+          "trust": 42.7
+        },
+        {
+          "country": "Germany",
+          "pledged": 76756,
+          "delivered": 32590,
+          "trust_delta": -8.63,
+          "verdict": "promised 76,756 but delivered only 32,590 \u2014 BETRAYAL (58% short)",
+          "trust": 13.9
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "event": "mortality",
+      "details": [
+        {
+          "country": "India",
+          "deaths": 419585,
+          "population": 8537696
+        },
+        {
+          "country": "USA",
+          "deaths": 63450,
+          "population": 5936550
+        },
+        {
+          "country": "China",
+          "deaths": 0,
+          "population": 8922686
+        },
+        {
+          "country": "Brazil",
+          "deaths": 0,
+          "population": 3824199
+        },
+        {
+          "country": "Germany",
+          "deaths": 0,
+          "population": 2450000
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "event": "elimination",
+      "details": [],
+      "alive": [
+        "India",
+        "USA",
+        "China",
+        "Brazil",
+        "Germany"
+      ]
+    },
+    {
+      "round": 6,
+      "event": "round_start",
+      "snapshot": {
+        "India": {
+          "P": 8537696,
+          "C": 2824409,
+          "V": 66898,
+          "sick": 0,
+          "trust": 49.9,
+          "alive": true
+        },
+        "USA": {
+          "P": 5936550,
+          "C": 1870000,
+          "V": 0,
+          "sick": 0,
+          "trust": 34.7,
+          "alive": true
+        },
+        "China": {
+          "P": 8922686,
+          "C": 2700485,
+          "V": 111358,
+          "sick": 0,
+          "trust": 37.0,
+          "alive": true
+        },
+        "Brazil": {
+          "P": 3824199,
+          "C": 1035339,
+          "V": 62595,
+          "sick": 0,
+          "trust": 42.8,
+          "alive": true
+        },
+        "Germany": {
+          "P": 2450000,
+          "C": 741250,
+          "V": 106968,
+          "sick": 0,
+          "trust": 14.6,
+          "alive": true
+        }
+      }
+    },
+    {
+      "round": 6,
+      "event": "pandemic",
+      "details": [
+        {
+          "roll": 60,
+          "contained": false,
+          "multiplier": 1.55,
+          "new_infections": 1581000,
+          "country": "India"
+        },
+        {
+          "roll": 34,
+          "contained": true,
+          "multiplier": 1.0,
+          "new_infections": 600000,
+          "country": "USA"
+        },
+        {
+          "roll": 9,
+          "contained": true,
+          "multiplier": 1.0,
+          "new_infections": 930000,
+          "country": "China"
+        },
+        {
+          "roll": 33,
+          "contained": true,
+          "multiplier": 1.0,
+          "new_infections": 410000,
+          "country": "Brazil"
+        },
+        {
+          "roll": 94,
+          "contained": false,
+          "multiplier": 1.55,
+          "new_infections": 379750,
+          "country": "Germany"
+        }
+      ]
+    },
+    {
+      "round": 6,
+      "event": "production",
+      "details": [
+        {
+          "produced": 912361,
+          "capacity": 912361,
+          "spent": 912361.0,
+          "need": 2534102,
+          "income": 384196.32,
+          "bankrupt": false,
+          "country": "India",
+          "capacity_pct": 83.70290196078432
+        },
+        {
+          "produced": 629274,
+          "capacity": 629274,
+          "spent": 629274.0,
+          "need": 1200000,
+          "income": 267144.75,
+          "bankrupt": false,
+          "country": "USA",
+          "capacity_pct": 98.9425
+        },
+        {
+          "produced": 997805,
+          "capacity": 997805,
+          "spent": 997805.0,
+          "need": 1748642,
+          "income": 401520.87,
+          "bankrupt": false,
+          "country": "China",
+          "capacity_pct": 95.94286021505377
+        },
+        {
+          "produced": 388016,
+          "capacity": 388016,
+          "spent": 388016.0,
+          "need": 757405,
+          "income": 172088.955,
+          "bankrupt": false,
+          "country": "Brazil",
+          "capacity_pct": 93.27314634146342
+        },
+        {
+          "produced": 272000,
+          "capacity": 272000,
+          "spent": 272000.0,
+          "need": 517782,
+          "income": 110250.0,
+          "bankrupt": false,
+          "country": "Germany",
+          "capacity_pct": 100.0
+        }
+      ]
+    },
+    {
+      "round": 6,
+      "event": "alarm",
+      "critical": "India",
+      "y_needed": 601741,
+      "broadcast": "EMERGENCY BROADCAST \u2014 Round 6: India has the highest adversity score this round (28.7/100). It has 1,581,000 sick citizens and only 979,259 vials. It needs exactly 601,741 vaccines to stop its population and production capacity from crashing.",
+      "scores": {
+        "India": 28.698873773413915,
+        "USA": 12.329265600544428,
+        "China": 13.122453616737918,
+        "Brazil": 20.26896035052477,
+        "Germany": 18.923157400999184
+      }
+    },
+    {
+      "round": 6,
+      "event": "pledges",
+      "pledges": {
+        "India": 0,
+        "USA": 13173,
+        "China": 35832,
+        "Brazil": 14213,
+        "Germany": 0
+      },
+      "statements": {
+        "USA": "(heuristic)",
+        "China": "(heuristic)",
+        "Brazil": "(heuristic)",
+        "Germany": "(heuristic)"
+      }
+    },
+    {
+      "round": 6,
+      "event": "allocations",
+      "allocations": {
+        "India": {
+          "cure": 979259,
+          "transfers": [],
+          "reasoning": "heuristic: domestic triage first, partial aid, opportunistic sale"
+        },
+        "USA": {
+          "cure": 600000,
+          "transfers": [
+            {
+              "target": "India",
+              "amount": 5689,
+              "kind": "gift",
+              "price": 0
+            }
+          ],
+          "reasoning": "heuristic: domestic triage first, partial aid, opportunistic sale"
+        },
+        "China": {
+          "cure": 930000,
+          "transfers": [
+            {
+              "target": "India",
+              "amount": 31588,
+              "kind": "gift",
+              "price": 0
+            }
+          ],
+          "reasoning": "heuristic: domestic triage first, partial aid, opportunistic sale"
+        },
+        "Brazil": {
+          "cure": 410000,
+          "transfers": [
+            {
+              "target": "India",
+              "amount": 10956,
+              "kind": "gift",
+              "price": 0
+            }
+          ],
+          "reasoning": "heuristic: domestic triage first, partial aid, opportunistic sale"
+        },
+        "Germany": {
+          "cure": 378968,
+          "transfers": [],
+          "reasoning": "heuristic: domestic triage first, partial aid, opportunistic sale"
+        }
+      }
+    },
+    {
+      "round": 6,
+      "event": "resolution",
+      "actions": [
+        {
+          "round": 6,
+          "actor": "India",
+          "action": "cure",
+          "amount": 979259
+        },
+        {
+          "round": 6,
+          "actor": "USA",
+          "action": "cure",
+          "amount": 600000
+        },
+        {
+          "round": 6,
+          "actor": "China",
+          "action": "cure",
+          "amount": 930000
+        },
+        {
+          "round": 6,
+          "actor": "Brazil",
+          "action": "cure",
+          "amount": 410000
+        },
+        {
+          "round": 6,
+          "actor": "Germany",
+          "action": "cure",
+          "amount": 378968
+        },
+        {
+          "round": 6,
+          "actor": "USA",
+          "action": "gift",
+          "target": "India",
+          "amount": 5689
+        },
+        {
+          "round": 6,
+          "actor": "China",
+          "action": "gift",
+          "target": "India",
+          "amount": 31588
+        },
+        {
+          "round": 6,
+          "actor": "Brazil",
+          "action": "gift",
+          "target": "India",
+          "amount": 10956
+        }
+      ],
+      "deception": [
+        {
+          "country": "USA",
+          "pledged": 13173,
+          "delivered": 5689,
+          "trust_delta": -8.52,
+          "verdict": "promised 13,173 but delivered only 5,689 \u2014 BETRAYAL (57% short)",
+          "trust": 26.2
+        },
+        {
+          "country": "China",
+          "pledged": 35832,
+          "delivered": 31588,
+          "trust_delta": -1.78,
+          "verdict": "promised 35,832 but delivered only 31,588 \u2014 BETRAYAL (12% short)",
+          "trust": 35.3
+        },
+        {
+          "country": "Brazil",
+          "pledged": 14213,
+          "delivered": 10956,
+          "trust_delta": -3.44,
+          "verdict": "promised 14,213 but delivered only 10,956 \u2014 BETRAYAL (23% short)",
+          "trust": 39.4
+        },
+        {
+          "country": "Germany",
+          "pledged": 0,
+          "delivered": 0,
+          "trust_delta": 0.0,
+          "verdict": "made no promise and sent nothing \u2014 honest abstention",
+          "trust": 14.6
+        }
+      ]
+    },
+    {
+      "round": 6,
+      "event": "mortality",
+      "details": [
+        {
+          "country": "India",
+          "deaths": 601741,
+          "population": 7935955
+        },
+        {
+          "country": "USA",
+          "deaths": 0,
+          "population": 5936550
+        },
+        {
+          "country": "China",
+          "deaths": 0,
+          "population": 8922686
+        },
+        {
+          "country": "Brazil",
+          "deaths": 0,
+          "population": 3824199
+        },
+        {
+          "country": "Germany",
+          "deaths": 782,
+          "population": 2449218
+        }
+      ]
+    },
+    {
+      "round": 6,
+      "event": "elimination",
+      "details": [],
+      "alive": [
+        "India",
+        "USA",
+        "China",
+        "Brazil",
+        "Germany"
+      ]
+    },
+    {
+      "round": 7,
+      "event": "round_start",
+      "snapshot": {
+        "India": {
+          "P": 7935955,
+          "C": 2296245,
+          "V": 48233,
+          "sick": 0,
+          "trust": 49.9,
+          "alive": true
+        },
+        "USA": {
+          "P": 5936550,
+          "C": 1507871,
+          "V": 23585,
+          "sick": 0,
+          "trust": 26.7,
+          "alive": true
+        },
+        "China": {
+          "P": 8922686,
+          "C": 2104201,
+          "V": 147575,
+          "sick": 0,
+          "trust": 35.6,
+          "alive": true
+        },
+        "Brazil": {
+          "P": 3824199,
+          "C": 819412,
+          "V": 29655,
+          "sick": 0,
+          "trust": 39.6,
+          "alive": true
+        },
+        "Germany": {
+          "P": 2449218,
+          "C": 579500,
+          "V": 0,
+          "sick": 0,
+          "trust": 15.3,
+          "alive": true
+        }
+      }
+    },
+    {
+      "round": 7,
+      "event": "pandemic",
+      "details": [
+        {
+          "roll": 28,
+          "contained": true,
+          "multiplier": 1.0,
+          "new_infections": 1020000,
+          "country": "India"
+        },
+        {
+          "roll": 25,
+          "contained": true,
+          "multiplier": 1.0,
+          "new_infections": 600000,
+          "country": "USA"
+        },
+        {
+          "roll": 13,
+          "contained": true,
+          "multiplier": 1.0,
+          "new_infections": 930000,
+          "country": "China"
+        },
+        {
+          "roll": 71,
+          "contained": false,
+          "multiplier": 1.55,
+          "new_infections": 635500,
+          "country": "Brazil"
+        },
+        {
+          "roll": 26,
+          "contained": true,
+          "multiplier": 1.0,
+          "new_infections": 245000,
+          "country": "Germany"
+        }
+      ]
+    },
+    {
+      "round": 7,
+      "event": "production",
+      "details": [
+        {
+          "produced": 848057,
+          "capacity": 848057,
+          "spent": 848057.0,
+          "need": 1991767,
+          "income": 357117.975,
+          "bankrupt": false,
+          "country": "India",
+          "capacity_pct": 77.80348039215686
+        },
+        {
+          "produced": 629274,
+          "capacity": 629274,
+          "spent": 629274.0,
+          "need": 1176415,
+          "income": 267144.75,
+          "bankrupt": false,
+          "country": "USA",
+          "capacity_pct": 98.9425
+        },
+        {
+          "produced": 997805,
+          "capacity": 997805,
+          "spent": 997805.0,
+          "need": 1712425,
+          "income": 401520.87,
+          "bankrupt": false,
+          "country": "China",
+          "capacity_pct": 95.94286021505377
+        },
+        {
+          "produced": 388016,
+          "capacity": 388016,
+          "spent": 388016.0,
+          "need": 1015845,
+          "income": 172088.955,
+          "bankrupt": false,
+          "country": "Brazil",
+          "capacity_pct": 93.27314634146342
+        },
+        {
+          "produced": 271913,
+          "capacity": 271913,
+          "spent": 271913.0,
+          "need": 490000,
+          "income": 110214.81,
+          "bankrupt": false,
+          "country": "Germany",
+          "capacity_pct": 99.96808163265307
+        }
+      ]
+    },
+    {
+      "round": 7,
+      "event": "alarm",
+      "critical": "Brazil",
+      "y_needed": 217829,
+      "broadcast": "EMERGENCY BROADCAST \u2014 Round 7: Brazil has the highest adversity score this round (32.6/100). It has 635,500 sick citizens and only 417,671 vials. It needs exactly 217,829 vaccines to stop its population and production capacity from crashing.",
+      "scores": {
+        "India": 20.462922035913085,
+        "USA": 13.33868654868976,
+        "China": 14.27135211210928,
+        "Brazil": 32.601857234504806,
+        "Germany": 17.481194755673524
+      }
+    },
+    {
+      "round": 7,
+      "event": "pledges",
+      "pledges": {
+        "India": 0,
+        "USA": 23786,
+        "China": 43076,
+        "Brazil": 0,
+        "Germany": 14802
+      },
+      "statements": {
+        "India": "(heuristic)",
+        "USA": "(heuristic)",
+        "China": "(heuristic)",
+        "Germany": "(heuristic)"
+      }
+    },
+    {
+      "round": 7,
+      "event": "allocations",
+      "allocations": {
+        "India": {
+          "cure": 896290,
+          "transfers": [],
+          "reasoning": "heuristic: domestic triage first, partial aid, opportunistic sale"
+        },
+        "USA": {
+          "cure": 600000,
+          "transfers": [
+            {
+              "target": "Brazil",
+              "amount": 20489,
+              "kind": "gift",
+              "price": 0
+            }
+          ],
+          "reasoning": "heuristic: domestic triage first, partial aid, opportunistic sale"
+        },
+        "China": {
+          "cure": 930000,
+          "transfers": [
+            {
+              "target": "Brazil",
+              "amount": 29152,
+              "kind": "gift",
+              "price": 0
+            }
+          ],
+          "reasoning": "heuristic: domestic triage first, partial aid, opportunistic sale"
+        },
+        "Brazil": {
+          "cure": 417671,
+          "transfers": [],
+          "reasoning": "heuristic: domestic triage first, partial aid, opportunistic sale"
+        },
+        "Germany": {
+          "cure": 245000,
+          "transfers": [
+            {
+              "target": "Brazil",
+              "amount": 9753,
+              "kind": "gift",
+              "price": 0
+            }
+          ],
+          "reasoning": "heuristic: domestic triage first, partial aid, opportunistic sale"
+        }
+      }
+    },
+    {
+      "round": 7,
+      "event": "resolution",
+      "actions": [
+        {
+          "round": 7,
+          "actor": "India",
+          "action": "cure",
+          "amount": 896290
+        },
+        {
+          "round": 7,
+          "actor": "USA",
+          "action": "cure",
+          "amount": 600000
+        },
+        {
+          "round": 7,
+          "actor": "China",
+          "action": "cure",
+          "amount": 930000
+        },
+        {
+          "round": 7,
+          "actor": "Brazil",
+          "action": "cure",
+          "amount": 417671
+        },
+        {
+          "round": 7,
+          "actor": "Germany",
+          "action": "cure",
+          "amount": 245000
+        },
+        {
+          "round": 7,
+          "actor": "USA",
+          "action": "gift",
+          "target": "Brazil",
+          "amount": 20489
+        },
+        {
+          "round": 7,
+          "actor": "China",
+          "action": "gift",
+          "target": "Brazil",
+          "amount": 29152
+        },
+        {
+          "round": 7,
+          "actor": "Germany",
+          "action": "gift",
+          "target": "Brazil",
+          "amount": 9753
+        }
+      ],
+      "deception": [
+        {
+          "country": "India",
+          "pledged": 0,
+          "delivered": 0,
+          "trust_delta": 0.0,
+          "verdict": "made no promise and sent nothing \u2014 honest abstention",
+          "trust": 49.9
+        },
+        {
+          "country": "USA",
+          "pledged": 23786,
+          "delivered": 20489,
+          "trust_delta": -2.08,
+          "verdict": "promised 23,786 but delivered only 20,489 \u2014 BETRAYAL (14% short)",
+          "trust": 24.6
+        },
+        {
+          "country": "China",
+          "pledged": 43076,
+          "delivered": 29152,
+          "trust_delta": -4.85,
+          "verdict": "promised 43,076 but delivered only 29,152 \u2014 BETRAYAL (32% short)",
+          "trust": 30.7
+        },
+        {
+          "country": "Germany",
+          "pledged": 14802,
+          "delivered": 9753,
+          "trust_delta": -5.12,
+          "verdict": "promised 14,802 but delivered only 9,753 \u2014 BETRAYAL (34% short)",
+          "trust": 10.2
+        }
+      ]
+    },
+    {
+      "round": 7,
+      "event": "mortality",
+      "details": [
+        {
+          "country": "India",
+          "deaths": 123710,
+          "population": 7812245
+        },
+        {
+          "country": "USA",
+          "deaths": 0,
+          "population": 5936550
+        },
+        {
+          "country": "China",
+          "deaths": 0,
+          "population": 8922686
+        },
+        {
+          "country": "Brazil",
+          "deaths": 217829,
+          "population": 3606370
+        },
+        {
+          "country": "Germany",
+          "deaths": 0,
+          "population": 2449218
+        }
+      ]
+    },
+    {
+      "round": 7,
+      "event": "elimination",
+      "details": [],
+      "alive": [
+        "India",
+        "USA",
+        "China",
+        "Brazil",
+        "Germany"
+      ]
+    },
+    {
+      "round": 8,
+      "event": "round_start",
+      "snapshot": {
+        "India": {
+          "P": 7812245,
+          "C": 1805305,
+          "V": 0,
+          "sick": 0,
+          "trust": 49.9,
+          "alive": true
+        },
+        "USA": {
+          "P": 5936550,
+          "C": 1145742,
+          "V": 32370,
+          "sick": 0,
+          "trust": 25.1,
+          "alive": true
+        },
+        "China": {
+          "P": 8922686,
+          "C": 1507916,
+          "V": 186228,
+          "sick": 0,
+          "trust": 31.1,
+          "alive": true
+        },
+        "Brazil": {
+          "P": 3606370,
+          "C": 603485,
+          "V": 59394,
+          "sick": 0,
+          "trust": 39.8,
+          "alive": true
+        },
+        "Germany": {
+          "P": 2449218,
+          "C": 417802,
+          "V": 17160,
+          "sick": 0,
+          "trust": 11.0,
+          "alive": true
+        }
+      }
+    },
+    {
+      "round": 8,
+      "event": "pandemic",
+      "details": [
+        {
+          "roll": 80,
+          "contained": false,
+          "multiplier": 1.55,
+          "new_infections": 1581000,
+          "country": "India"
+        },
+        {
+          "roll": 49,
+          "contained": true,
+          "multiplier": 1.0,
+          "new_infections": 600000,
+          "country": "USA"
+        },
+        {
+          "roll": 33,
+          "contained": true,
+          "multiplier": 1.0,
+          "new_infections": 930000,
+          "country": "China"
+        },
+        {
+          "roll": 84,
+          "contained": false,
+          "multiplier": 1.55,
+          "new_infections": 635500,
+          "country": "Brazil"
+        },
+        {
+          "roll": 51,
+          "contained": true,
+          "multiplier": 1.0,
+          "new_infections": 245000,
+          "country": "Germany"
+        }
+      ]
+    },
+    {
+      "round": 8,
+      "event": "production",
+      "details": [
+        {
+          "produced": 834837,
+          "capacity": 834837,
+          "spent": 834837.0,
+          "need": 2601000,
+          "income": 351551.02499999997,
+          "bankrupt": false,
+          "country": "India",
+          "capacity_pct": 76.59063725490196
+        },
+        {
+          "produced": 629274,
+          "capacity": 629274,
+          "spent": 629274.0,
+          "need": 1167630,
+          "income": 267144.75,
+          "bankrupt": false,
+          "country": "USA",
+          "capacity_pct": 98.9425
+        },
+        {
+          "produced": 997805,
+          "capacity": 997805,
+          "spent": 997805.0,
+          "need": 1673772,
+          "income": 401520.87,
+          "bankrupt": false,
+          "country": "China",
+          "capacity_pct": 95.94286021505377
+        },
+        {
+          "produced": 365914,
+          "capacity": 365914,
+          "spent": 365914.0,
+          "need": 986106,
+          "income": 162286.65,
+          "bankrupt": false,
+          "country": "Brazil",
+          "capacity_pct": 87.96024390243902
+        },
+        {
+          "produced": 271913,
+          "capacity": 271913,
+          "spent": 271913.0,
+          "need": 472840,
+          "income": 110214.81,
+          "bankrupt": false,
+          "country": "Germany",
+          "capacity_pct": 99.96808163265307
+        }
+      ]
+    },
+    {
+      "round": 8,
+      "event": "alarm",
+      "critical": "Brazil",
+      "y_needed": 210192,
+      "broadcast": "EMERGENCY BROADCAST \u2014 Round 8: Brazil has the highest adversity score this round (34.1/100). It has 635,500 sick citizens and only 425,308 vials. It needs exactly 210,192 vaccines to stop its population and production capacity from crashing.",
+      "scores": {
+        "India": 33.66566018124336,
+        "USA": 14.757995745680835,
+        "China": 16.136988781294065,
+        "Brazil": 34.11385710959809,
+        "Germany": 18.843126754942123
+      }
+    },
+    {
+      "round": 8,
+      "event": "pledges",
+      "pledges": {
+        "India": 0,
+        "USA": 27739,
+        "China": 50806,
+        "Brazil": 0,
+        "Germany": 24240
+      },
+      "statements": {
+        "India": "(heuristic)",
+        "USA": "(heuristic)",
+        "China": "(heuristic)",
+        "Germany": "(heuristic)"
+      }
+    },
+    {
+      "round": 8,
+      "event": "allocations",
+      "allocations": {
+        "India": {
+          "cure": 834837,
+          "transfers": [],
+          "reasoning": "heuristic: domestic triage first, partial aid, opportunistic sale"
+        },
+        "USA": {
+          "cure": 600000,
+          "transfers": [
+            {
+              "target": "Brazil",
+              "amount": 14257,
+              "kind": "gift",
+              "price": 0
+            },
+            {
+              "target": "India",
+              "amount": 23693,
+              "kind": "sell",
+              "price": 35539
+            }
+          ],
+          "reasoning": "heuristic: domestic triage first, partial aid, opportunistic sale"
+        },
+        "China": {
+          "cure": 930000,
+          "transfers": [
+            {
+              "target": "Brazil",
+              "amount": 35550,
+              "kind": "gift",
+              "price": 0
+            },
+            {
+              "target": "India",
+              "amount": 109241,
+              "kind": "sell",
+              "price": 163861
+            }
+          ],
+          "reasoning": "heuristic: domestic triage first, partial aid, opportunistic sale"
+        },
+        "Brazil": {
+          "cure": 425308,
+          "transfers": [],
+          "reasoning": "heuristic: domestic triage first, partial aid, opportunistic sale"
+        },
+        "Germany": {
+          "cure": 245000,
+          "transfers": [
+            {
+              "target": "Brazil",
+              "amount": 14814,
+              "kind": "gift",
+              "price": 0
+            },
+            {
+              "target": "India",
+              "amount": 14629,
+              "kind": "sell",
+              "price": 21943
+            }
+          ],
+          "reasoning": "heuristic: domestic triage first, partial aid, opportunistic sale"
+        }
+      }
+    },
+    {
+      "round": 8,
+      "event": "resolution",
+      "actions": [
+        {
+          "round": 8,
+          "actor": "India",
+          "action": "cure",
+          "amount": 834837
+        },
+        {
+          "round": 8,
+          "actor": "USA",
+          "action": "cure",
+          "amount": 600000
+        },
+        {
+          "round": 8,
+          "actor": "China",
+          "action": "cure",
+          "amount": 930000
+        },
+        {
+          "round": 8,
+          "actor": "Brazil",
+          "action": "cure",
+          "amount": 425308
+        },
+        {
+          "round": 8,
+          "actor": "Germany",
+          "action": "cure",
+          "amount": 245000
+        },
+        {
+          "round": 8,
+          "actor": "USA",
+          "action": "gift",
+          "target": "Brazil",
+          "amount": 14257
+        },
+        {
+          "round": 8,
+          "actor": "China",
+          "action": "gift",
+          "target": "Brazil",
+          "amount": 35550
+        },
+        {
+          "round": 8,
+          "actor": "Germany",
+          "action": "gift",
+          "target": "Brazil",
+          "amount": 14814
+        },
+        {
+          "round": 8,
+          "actor": "USA",
+          "action": "sell",
+          "target": "India",
+          "amount": 23693,
+          "price": 35539
+        },
+        {
+          "round": 8,
+          "actor": "China",
+          "action": "sell",
+          "target": "India",
+          "amount": 109241,
+          "price": 163861
+        },
+        {
+          "round": 8,
+          "actor": "Germany",
+          "action": "sell",
+          "target": "India",
+          "amount": 14629,
+          "price": 21943
+        }
+      ],
+      "deception": [
+        {
+          "country": "India",
+          "pledged": 0,
+          "delivered": 0,
+          "trust_delta": 0.0,
+          "verdict": "made no promise and sent nothing \u2014 honest abstention",
+          "trust": 49.9
+        },
+        {
+          "country": "USA",
+          "pledged": 27739,
+          "delivered": 14257,
+          "trust_delta": -7.29,
+          "verdict": "promised 27,739 but delivered only 14,257 \u2014 BETRAYAL (49% short)",
+          "trust": 17.8
+        },
+        {
+          "country": "China",
+          "pledged": 50806,
+          "delivered": 35550,
+          "trust_delta": -4.5,
+          "verdict": "promised 50,806 but delivered only 35,550 \u2014 BETRAYAL (30% short)",
+          "trust": 26.6
+        },
+        {
+          "country": "Germany",
+          "pledged": 24240,
+          "delivered": 14814,
+          "trust_delta": -5.83,
+          "verdict": "promised 24,240 but delivered only 14,814 \u2014 BETRAYAL (39% short)",
+          "trust": 5.2
+        }
+      ]
+    },
+    {
+      "round": 8,
+      "event": "mortality",
+      "details": [
+        {
+          "country": "India",
+          "deaths": 746163,
+          "population": 7066082
+        },
+        {
+          "country": "USA",
+          "deaths": 0,
+          "population": 5936550
+        },
+        {
+          "country": "China",
+          "deaths": 0,
+          "population": 8922686
+        },
+        {
+          "country": "Brazil",
+          "deaths": 210192,
+          "population": 3396178
+        },
+        {
+          "country": "Germany",
+          "deaths": 0,
+          "population": 2449218
+        }
+      ]
+    },
+    {
+      "round": 8,
+      "event": "elimination",
+      "details": [],
+      "alive": [
+        "India",
+        "USA",
+        "China",
+        "Brazil",
+        "Germany"
+      ]
+    },
+    {
+      "round": 9,
+      "event": "round_start",
+      "snapshot": {
+        "India": {
+          "P": 7066082,
+          "C": 1100677,
+          "V": 147563,
+          "sick": 0,
+          "trust": 49.9,
+          "alive": true
+        },
+        "USA": {
+          "P": 5936550,
+          "C": 819151,
+          "V": 23694,
+          "sick": 0,
+          "trust": 18.5,
+          "alive": true
+        },
+        "China": {
+          "P": 8922686,
+          "C": 1075493,
+          "V": 109242,
+          "sick": 0,
+          "trust": 27.1,
+          "alive": true
+        },
+        "Brazil": {
+          "P": 3396178,
+          "C": 399858,
+          "V": 64621,
+          "sick": 0,
+          "trust": 40.0,
+          "alive": true
+        },
+        "Germany": {
+          "P": 2449218,
+          "C": 278047,
+          "V": 14630,
+          "sick": 0,
+          "trust": 6.1,
+          "alive": true
+        }
+      }
+    },
+    {
+      "round": 9,
+      "event": "pandemic",
+      "details": [
+        {
+          "roll": 25,
+          "contained": true,
+          "multiplier": 1.0,
+          "new_infections": 1020000,
+          "country": "India"
+        },
+        {
+          "roll": 87,
+          "contained": true,
+          "multiplier": 1.0,
+          "new_infections": 600000,
+          "country": "USA"
+        },
+        {
+          "roll": 89,
+          "contained": false,
+          "multiplier": 1.55,
+          "new_infections": 1441500,
+          "country": "China"
+        },
+        {
+          "roll": 23,
+          "contained": true,
+          "multiplier": 1.0,
+          "new_infections": 410000,
+          "country": "Brazil"
+        },
+        {
+          "roll": 25,
+          "contained": true,
+          "multiplier": 1.0,
+          "new_infections": 245000,
+          "country": "Germany"
+        }
+      ]
+    },
+    {
+      "round": 9,
+      "event": "production",
+      "details": [
+        {
+          "produced": 755100,
+          "capacity": 755100,
+          "spent": 755100.0,
+          "need": 1892437,
+          "income": 317973.69,
+          "bankrupt": false,
+          "country": "India",
+          "capacity_pct": 69.2753137254902
+        },
+        {
+          "produced": 629274,
+          "capacity": 629274,
+          "spent": 629274.0,
+          "need": 1176306,
+          "income": 267144.75,
+          "bankrupt": false,
+          "country": "USA",
+          "capacity_pct": 98.9425
+        },
+        {
+          "produced": 997805,
+          "capacity": 997805,
+          "spent": 997805.0,
+          "need": 2262258,
+          "income": 401520.87,
+          "bankrupt": false,
+          "country": "China",
+          "capacity_pct": 95.94286021505377
+        },
+        {
+          "produced": 344587,
+          "capacity": 344587,
+          "spent": 344587.0,
+          "need": 755379,
+          "income": 152828.00999999998,
+          "bankrupt": false,
+          "country": "Brazil",
+          "capacity_pct": 82.83360975609756
+        },
+        {
+          "produced": 271913,
+          "capacity": 271913,
+          "spent": 271913.0,
+          "need": 475370,
+          "income": 110214.81,
+          "bankrupt": false,
+          "country": "Germany",
+          "capacity_pct": 99.96808163265307
+        }
+      ]
+    },
+    {
+      "round": 9,
+      "event": "alarm",
+      "critical": "China",
+      "y_needed": 334453,
+      "broadcast": "EMERGENCY BROADCAST \u2014 Round 9: China has the highest adversity score this round (26.8/100). It has 1,441,500 sick citizens and only 1,107,047 vials. It needs exactly 334,453 vaccines to stop its population and production capacity from crashing.",
+      "scores": {
+        "India": 24.688587711643923,
+        "USA": 16.643067640540025,
+        "China": 26.810939038348458,
+        "Brazil": 25.097072350783534,
+        "Germany": 20.338101895143048
+      }
+    },
+    {
+      "round": 9,
+      "event": "pledges",
+      "pledges": {
+        "India": 0,
+        "USA": 23835,
+        "China": 0,
+        "Brazil": 0,
+        "Germany": 22848
+      },
+      "statements": {
+        "India": "(heuristic)",
+        "USA": "(heuristic)",
+        "Brazil": "(heuristic)",
+        "Germany": "(heuristic)"
+      }
+    },
+    {
+      "round": 9,
+      "event": "allocations",
+      "allocations": {
+        "India": {
+          "cure": 902663,
+          "transfers": [],
+          "reasoning": "heuristic: domestic triage first, partial aid, opportunistic sale"
+        },
+        "USA": {
+          "cure": 600000,
+          "transfers": [
+            {
+              "target": "China",
+              "amount": 17254,
+              "kind": "gift",
+              "price": 0
+            },
+            {
+              "target": "India",
+              "amount": 17857,
+              "kind": "sell",
+              "price": 26785
+            }
+          ],
+          "reasoning": "heuristic: domestic triage first, partial aid, opportunistic sale"
+        },
+        "China": {
+          "cure": 1107047,
+          "transfers": [],
+          "reasoning": "heuristic: domestic triage first, partial aid, opportunistic sale"
+        },
+        "Brazil": {
+          "cure": 409208,
+          "transfers": [],
+          "reasoning": "heuristic: domestic triage first, partial aid, opportunistic sale"
+        },
+        "Germany": {
+          "cure": 245000,
+          "transfers": [
+            {
+              "target": "China",
+              "amount": 15027,
+              "kind": "gift",
+              "price": 0
+            },
+            {
+              "target": "India",
+              "amount": 13258,
+              "kind": "sell",
+              "price": 19887
+            }
+          ],
+          "reasoning": "heuristic: domestic triage first, partial aid, opportunistic sale"
+        }
+      }
+    },
+    {
+      "round": 9,
+      "event": "resolution",
+      "actions": [
+        {
+          "round": 9,
+          "actor": "India",
+          "action": "cure",
+          "amount": 902663
+        },
+        {
+          "round": 9,
+          "actor": "USA",
+          "action": "cure",
+          "amount": 600000
+        },
+        {
+          "round": 9,
+          "actor": "China",
+          "action": "cure",
+          "amount": 1107047
+        },
+        {
+          "round": 9,
+          "actor": "Brazil",
+          "action": "cure",
+          "amount": 409208
+        },
+        {
+          "round": 9,
+          "actor": "Germany",
+          "action": "cure",
+          "amount": 245000
+        },
+        {
+          "round": 9,
+          "actor": "USA",
+          "action": "gift",
+          "target": "China",
+          "amount": 17254
+        },
+        {
+          "round": 9,
+          "actor": "Germany",
+          "action": "gift",
+          "target": "China",
+          "amount": 15027
+        },
+        {
+          "round": 9,
+          "actor": "USA",
+          "action": "sell",
+          "target": "India",
+          "amount": 17857,
+          "price": 26785
+        },
+        {
+          "round": 9,
+          "actor": "Germany",
+          "action": "sell",
+          "target": "India",
+          "amount": 13258,
+          "price": 19887
+        }
+      ],
+      "deception": [
+        {
+          "country": "India",
+          "pledged": 0,
+          "delivered": 0,
+          "trust_delta": 0.0,
+          "verdict": "made no promise and sent nothing \u2014 honest abstention",
+          "trust": 49.9
+        },
+        {
+          "country": "USA",
+          "pledged": 23835,
+          "delivered": 17254,
+          "trust_delta": -4.14,
+          "verdict": "promised 23,835 but delivered only 17,254 \u2014 BETRAYAL (28% short)",
+          "trust": 14.3
+        },
+        {
+          "country": "Brazil",
+          "pledged": 0,
+          "delivered": 0,
+          "trust_delta": 0.0,
+          "verdict": "made no promise and sent nothing \u2014 honest abstention",
+          "trust": 40.0
+        },
+        {
+          "country": "Germany",
+          "pledged": 22848,
+          "delivered": 15027,
+          "trust_delta": -5.13,
+          "verdict": "promised 22,848 but delivered only 15,027 \u2014 BETRAYAL (34% short)",
+          "trust": 1.0
+        }
+      ]
+    },
+    {
+      "round": 9,
+      "event": "mortality",
+      "details": [
+        {
+          "country": "India",
+          "deaths": 117337,
+          "population": 6948745
+        },
+        {
+          "country": "USA",
+          "deaths": 0,
+          "population": 5936550
+        },
+        {
+          "country": "China",
+          "deaths": 334453,
+          "population": 8588233
+        },
+        {
+          "country": "Brazil",
+          "deaths": 792,
+          "population": 3395386
+        },
+        {
+          "country": "Germany",
+          "deaths": 0,
+          "population": 2449218
+        }
+      ]
+    },
+    {
+      "round": 9,
+      "event": "elimination",
+      "details": [],
+      "alive": [
+        "India",
+        "USA",
+        "China",
+        "Brazil",
+        "Germany"
+      ]
+    },
+    {
+      "round": 10,
+      "event": "round_start",
+      "snapshot": {
+        "India": {
+          "P": 6948745,
+          "C": 616878,
+          "V": 31115,
+          "sick": 0,
+          "trust": 49.9,
+          "alive": true
+        },
+        "USA": {
+          "P": 5936550,
+          "C": 483807,
+          "V": 17857,
+          "sick": 0,
+          "trust": 15.0,
+          "alive": true
+        },
+        "China": {
+          "P": 8588233,
+          "C": 479209,
+          "V": 32281,
+          "sick": 0,
+          "trust": 27.5,
+          "alive": true
+        },
+        "Brazil": {
+          "P": 3395386,
+          "C": 208099,
+          "V": 0,
+          "sick": 0,
+          "trust": 40.2,
+          "alive": true
+        },
+        "Germany": {
+          "P": 2449218,
+          "C": 136235,
+          "V": 13258,
+          "sick": 0,
+          "trust": 1.9,
+          "alive": true
+        }
+      }
+    },
+    {
+      "round": 10,
+      "event": "pandemic",
+      "details": [
+        {
+          "roll": 100,
+          "contained": false,
+          "multiplier": 1.55,
+          "new_infections": 1581000,
+          "country": "India"
+        },
+        {
+          "roll": 99,
+          "contained": false,
+          "multiplier": 1.55,
+          "new_infections": 930000,
+          "country": "USA"
+        },
+        {
+          "roll": 100,
+          "contained": false,
+          "multiplier": 1.55,
+          "new_infections": 1441500,
+          "country": "China"
+        },
+        {
+          "roll": 46,
+          "contained": true,
+          "multiplier": 1.0,
+          "new_infections": 410000,
+          "country": "Brazil"
+        },
+        {
+          "roll": 29,
+          "contained": true,
+          "multiplier": 1.0,
+          "new_infections": 245000,
+          "country": "Germany"
+        }
+      ]
+    },
+    {
+      "round": 10,
+      "event": "production",
+      "details": [
+        {
+          "produced": 742561,
+          "capacity": 742561,
+          "spent": 742561.0,
+          "need": 2569885,
+          "income": 312693.52499999997,
+          "bankrupt": false,
+          "country": "India",
+          "capacity_pct": 68.12495098039216
+        },
+        {
+          "produced": 629274,
+          "capacity": 629274,
+          "spent": 629274.0,
+          "need": 1512143,
+          "income": 267144.75,
+          "bankrupt": false,
+          "country": "USA",
+          "capacity_pct": 98.9425
+        },
+        {
+          "produced": 865679,
+          "capacity": 960404,
+          "spent": 865679.0,
+          "need": 2339219,
+          "income": 386470.485,
+          "bankrupt": false,
+          "country": "China",
+          "capacity_pct": 92.34659139784947
+        },
+        {
+          "produced": 344507,
+          "capacity": 344507,
+          "spent": 344507.0,
+          "need": 820000,
+          "income": 152792.37,
+          "bankrupt": false,
+          "country": "Brazil",
+          "capacity_pct": 82.81429268292683
+        },
+        {
+          "produced": 246450,
+          "capacity": 271913,
+          "spent": 246450.0,
+          "need": 476742,
+          "income": 110214.81,
+          "bankrupt": false,
+          "country": "Germany",
+          "capacity_pct": 99.96808163265307
+        }
+      ]
+    },
+    {
+      "round": 10,
+      "event": "alarm",
+      "critical": "India",
+      "y_needed": 807324,
+      "broadcast": "EMERGENCY BROADCAST \u2014 Round 10: India has the highest adversity score this round (41.9/100). It has 1,581,000 sick citizens and only 773,676 vials. It needs exactly 807,324 vaccines to stop its population and production capacity from crashing.",
+      "scores": {
+        "India": 41.941359095471796,
+        "USA": 29.826379127563317,
+        "China": 35.579695428894674,
+        "Brazil": 31.385518239307537,
+        "Germany": 21.90143318512983
+      }
+    },
+    {
+      "round": 10,
+      "event": "pledges",
+      "pledges": {
+        "India": 0,
+        "USA": 0,
+        "China": 0,
+        "Brazil": 0,
+        "Germany": 8089
+      },
+      "statements": {
+        "USA": "(heuristic)",
+        "China": "(heuristic)",
+        "Brazil": "(heuristic)",
+        "Germany": "(heuristic)"
+      }
+    },
+    {
+      "round": 10,
+      "event": "allocations",
+      "allocations": {
+        "India": {
+          "cure": 773676,
+          "transfers": [],
+          "reasoning": "heuristic: domestic triage first, partial aid, opportunistic sale"
+        },
+        "USA": {
+          "cure": 647131,
+          "transfers": [],
+          "reasoning": "heuristic: domestic triage first, partial aid, opportunistic sale"
+        },
+        "China": {
+          "cure": 897960,
+          "transfers": [],
+          "reasoning": "heuristic: domestic triage first, partial aid, opportunistic sale"
+        },
+        "Brazil": {
+          "cure": 344507,
+          "transfers": [],
+          "reasoning": "heuristic: domestic triage first, partial aid, opportunistic sale"
+        },
+        "Germany": {
+          "cure": 245000,
+          "transfers": [
+            {
+              "target": "India",
+              "amount": 3505,
+              "kind": "gift",
+              "price": 0
+            },
+            {
+              "target": "India",
+              "amount": 5601,
+              "kind": "sell",
+              "price": 8401
+            }
+          ],
+          "reasoning": "heuristic: domestic triage first, partial aid, opportunistic sale"
+        }
+      }
+    },
+    {
+      "round": 10,
+      "event": "resolution",
+      "actions": [
+        {
+          "round": 10,
+          "actor": "India",
+          "action": "cure",
+          "amount": 773676
+        },
+        {
+          "round": 10,
+          "actor": "USA",
+          "action": "cure",
+          "amount": 647131
+        },
+        {
+          "round": 10,
+          "actor": "China",
+          "action": "cure",
+          "amount": 897960
+        },
+        {
+          "round": 10,
+          "actor": "Brazil",
+          "action": "cure",
+          "amount": 344507
+        },
+        {
+          "round": 10,
+          "actor": "Germany",
+          "action": "cure",
+          "amount": 245000
+        },
+        {
+          "round": 10,
+          "actor": "Germany",
+          "action": "gift",
+          "target": "India",
+          "amount": 3505
+        },
+        {
+          "round": 10,
+          "actor": "Germany",
+          "action": "sell",
+          "target": "India",
+          "amount": 5601,
+          "price": 8401
+        }
+      ],
+      "deception": [
+        {
+          "country": "USA",
+          "pledged": 0,
+          "delivered": 0,
+          "trust_delta": 0.0,
+          "verdict": "made no promise and sent nothing \u2014 honest abstention",
+          "trust": 15.0
+        },
+        {
+          "country": "China",
+          "pledged": 0,
+          "delivered": 0,
+          "trust_delta": 0.0,
+          "verdict": "made no promise and sent nothing \u2014 honest abstention",
+          "trust": 27.5
+        },
+        {
+          "country": "Brazil",
+          "pledged": 0,
+          "delivered": 0,
+          "trust_delta": 0.0,
+          "verdict": "made no promise and sent nothing \u2014 honest abstention",
+          "trust": 40.2
+        },
+        {
+          "country": "Germany",
+          "pledged": 8089,
+          "delivered": 6306,
+          "trust_delta": -3.31,
+          "verdict": "promised 8,089 but delivered only 6,306 \u2014 BETRAYAL (22% short)",
+          "trust": 0.0
+        }
+      ]
+    },
+    {
+      "round": 10,
+      "event": "mortality",
+      "details": [
+        {
+          "country": "India",
+          "deaths": 807324,
+          "population": 6141421
+        },
+        {
+          "country": "USA",
+          "deaths": 282869,
+          "population": 5653681
+        },
+        {
+          "country": "China",
+          "deaths": 543540,
+          "population": 8044693
+        },
+        {
+          "country": "Brazil",
+          "deaths": 65493,
+          "population": 3329893
+        },
+        {
+          "country": "Germany",
+          "deaths": 0,
+          "population": 2449218
+        }
+      ]
+    },
+    {
+      "round": 10,
+      "event": "elimination",
+      "details": [],
+      "alive": [
+        "India",
+        "USA",
+        "China",
+        "Brazil",
+        "Germany"
+      ]
+    }
+  ],
+  "leaderboard": [
+    {
+      "rank": 1,
+      "country": "USA",
+      "status": "ALIVE",
+      "population": 5653681,
+      "survival_%": 94.2,
+      "deaths": 346319,
+      "vaccinated": 6313681,
+      "capital": 121678,
+      "stockpile": 0,
+      "aid_given": 356139,
+      "aid_received": 0,
+      "vials_sold": 41550,
+      "betrayals": 8,
+      "promises_kept": 0,
+      "trust": 15.7,
+      "SCORE": 75.13
+    },
+    {
+      "rank": 2,
+      "country": "Germany",
+      "status": "ALIVE",
+      "population": 2449218,
+      "survival_%": 100.0,
+      "deaths": 782,
+      "vaccinated": 2583968,
+      "capital": 8401,
+      "stockpile": 5602,
+      "aid_given": 266131,
+      "aid_received": 0,
+      "vials_sold": 33488,
+      "betrayals": 9,
+      "promises_kept": 0,
+      "trust": 1.0,
+      "SCORE": 73.67
+    },
+    {
+      "rank": 3,
+      "country": "China",
+      "status": "ALIVE",
+      "population": 8044693,
+      "survival_%": 86.5,
+      "deaths": 1255307,
+      "vaccinated": 10090693,
+      "capital": 1,
+      "stockpile": 0,
+      "aid_given": 137218,
+      "aid_received": 32281,
+      "vials_sold": 109241,
+      "betrayals": 6,
+      "promises_kept": 0,
+      "trust": 28.0,
+      "SCORE": 64.75
+    },
+    {
+      "rank": 4,
+      "country": "India",
+      "status": "ALIVE",
+      "population": 6141421,
+      "survival_%": 60.2,
+      "deaths": 4058579,
+      "vaccinated": 10068421,
+      "capital": 178610,
+      "stockpile": 9106,
+      "aid_given": 58978,
+      "aid_received": 322852,
+      "vials_sold": 0,
+      "betrayals": 1,
+      "promises_kept": 0,
+      "trust": 49.9,
+      "SCORE": 64.63
+    },
+    {
+      "rank": 5,
+      "country": "Brazil",
+      "status": "ALIVE",
+      "population": 3329893,
+      "survival_%": 81.2,
+      "deaths": 770107,
+      "vaccinated": 4457393,
+      "capital": 16384,
+      "stockpile": 0,
+      "aid_given": 72933,
+      "aid_received": 536266,
+      "vials_sold": 0,
+      "betrayals": 3,
+      "promises_kept": 0,
+      "trust": 40.4,
+      "SCORE": 63.83
+    }
+  ]
+}

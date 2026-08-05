@@ -1,0 +1,6 @@
+numpy
+groq
+pandas
+dotenv
+jupyter
+ipykernel
